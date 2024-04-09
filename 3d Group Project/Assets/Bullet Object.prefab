@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5333565799666578878}
   - component: {fileID: 3311359089088935010}
   - component: {fileID: 5041437518752755569}
+  - component: {fileID: 1739907841199339472}
   m_Layer: 0
   m_Name: Bullet Object
   m_TagString: Untagged
@@ -94,7 +95,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154041745502973934}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -141,7 +142,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.2
+  m_Time: 0.1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -149,8 +150,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.022347435
-        value: 0.8238994
+        time: 0.036313042
+        value: 0.4654094
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -158,8 +159,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.94692737
-        value: 0.11949688
+        time: 0.949735
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -201,7 +202,7 @@ TrailRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 2
     shadowBias: 0.5
     generateLightingData: 0
   m_MinVertexDistance: 0.1
@@ -223,3 +224,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &1739907841199339472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154041745502973934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c90609c9abfc148bcb1b5f666e560d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 5041437518752755569}
+  explosion: {fileID: 0}
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 64
+  bounciness: 0
+  useGravity: 0
+  explosionDamage: 10
+  weakPointDamage: 80
+  explosionRange: 0.1
+  maxCollisions: 1
+  maxLifeTime: 5
+  explodeOnTouch: 1
