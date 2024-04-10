@@ -12,6 +12,7 @@ public class DashScript : MonoBehaviour
 
     [Header("Dashing")]
     public float dashForce, dashUpwardForce, dashDuration;
+    public bool isDashing = false;
 
     [Header("Cooldown")]
     public float dashCd;
@@ -34,12 +35,17 @@ public class DashScript : MonoBehaviour
 
     private void Dash()
     {
-        Vector3 forceToApply = orientation.forward * dashForce + orientation.up * dashUpwardForce;
+
+        Vector3 forceToApply = orientation.forward * dashForce * 100f + orientation.up * dashUpwardForce * 10f;
 
         rb.AddForce(forceToApply, ForceMode.Impulse);
+
+        isDashing= true;
+
+        Invoke(nameof(ResetDash),dashDuration);
     }
     private void ResetDash()
     {
-
+        isDashing = false;
     }
 }
