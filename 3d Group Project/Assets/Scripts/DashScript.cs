@@ -11,6 +11,7 @@ public class DashScript : MonoBehaviour
     private PlayerMovement pm;
 
     [Header("Dashing")]
+    public float maxSpeed;
     public float dashForce, dashUpwardForce, dashDuration;
     public bool isDashing = false;
 
@@ -29,13 +30,22 @@ public class DashScript : MonoBehaviour
 
     void Update()
     {
+        MaxSpeed();
+
         if (Input.GetKeyDown(dashKey))
             Dash();
+
+        if (dashCdTimer > 0)
+            dashCdTimer -= Time.deltaTime;
     }
 
     private void Dash()
     {
+        if (dashCdTimer > 0) return;
+        else dashCdTimer = dashCd;
 
+
+        rb.velocity = new Vector3(0f, 0f,0f);
         Vector3 forceToApply = orientation.forward * dashForce * 100f + orientation.up * dashUpwardForce * 10f;
 
         rb.AddForce(forceToApply, ForceMode.Impulse);
@@ -47,5 +57,17 @@ public class DashScript : MonoBehaviour
     private void ResetDash()
     {
         isDashing = false;
+    }
+
+    private void MaxSpeed()
+    {
+       
+        Vector3 FlatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        if (FlatVel.magnitude > maxSpeed)
+        {
+            Vector3 limitedVel = FlatVel.normalized * maxSpeed;
+            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+        }
+    
     }
 }
