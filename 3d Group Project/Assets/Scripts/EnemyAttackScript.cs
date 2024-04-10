@@ -8,8 +8,8 @@ public class EnemyAttackScript : MonoBehaviour
     private int currentWarning;
     public float warningRate = 0.2f;
     private float warningRateTimer;
-    [SerializeField] AudioClip warningSound;
-    [SerializeField] AudioClip fire;
+    [SerializeField] AudioSource warningSound;
+    [SerializeField] AudioSource fire;
 
 
    void Start()
@@ -17,24 +17,30 @@ public class EnemyAttackScript : MonoBehaviour
         currentWarning = warnings;
     }
 
+    void Update()
+    {
+        if(Input.GetButtonDown("Jump"))
+            WindUp(); 
+    }
+
   public void WindUp()
     {
         if (currentWarning > 0)
-        { Invoke(nameof(Sound)); }
+        { Invoke(nameof(Sound),0f); }
 
         else if (currentWarning <= 0)
-        { Invoke(nameof(Attack)); }
+        { Invoke(nameof(Attack),0f); }
     }
   void Sound()
     {
-        //warningSound.Play();
-        currentWarning--;
+       warningSound.Play();
+       currentWarning--;
        Invoke(nameof(WindUp), warningRate); 
     }
 
     void Attack()
     {
-       // fire.Play();
-        currentWarning = warnings;
-    }
+       fire.Play();
+       currentWarning = warnings;
+    } 
 }
