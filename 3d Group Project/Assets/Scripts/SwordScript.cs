@@ -41,7 +41,7 @@ public class SwordScript : MonoBehaviour
         {
            DownSword();
         }
-        if (sliceCdTimer > 5)
+        if (sliceCdTimer > 0)
         {
             sliceCdTimer -= Time.deltaTime;
             return;
@@ -57,6 +57,7 @@ public class SwordScript : MonoBehaviour
         else if (Input.GetKeyDown(sliceKey) && deflectionState)
         { 
             Invoke(nameof(Deflect), 0f);
+            Debug.Log("Deflect");
             sliceCdTimer = sliceCd;
         }
     }
@@ -76,7 +77,9 @@ public class SwordScript : MonoBehaviour
         if (deflectsLeft<= 0)
         { return; }
         leniancyTimer = leniancy;
+        rechargeTimer = recharge;
         deflectsLeft--;
+        Debug.Log("Deflects left" + deflectsLeft);
     }
 
     void DownSword()
