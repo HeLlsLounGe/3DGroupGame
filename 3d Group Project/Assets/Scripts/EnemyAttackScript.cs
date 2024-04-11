@@ -32,7 +32,7 @@ public class EnemyAttackScript : MonoBehaviour
 
         else { leniancy = 0; }
 
-        if(Input.GetButtonDown("Jump"))
+        if(Input.GetKeyDown("q"))
             WindUp(); 
     }
 

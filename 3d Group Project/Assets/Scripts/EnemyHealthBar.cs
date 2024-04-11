@@ -37,8 +37,7 @@ public class EnemyHealthBar : MonoBehaviour
         if (hitpoints <= 0 && !isDead)
         {
             isDead = true;
-
-            Invoke("EnemyLost", 0.5f);
+            Invoke("EnemyLost", 0f);
         }
     }
     private void EnemyLost()
