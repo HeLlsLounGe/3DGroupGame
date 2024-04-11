@@ -5,50 +5,98 @@ using UnityEngine;
 public class SwordScript : MonoBehaviour
 {
     public bool deflectionState = false;
-    private bool hitBoxActive = false;
-    public KeyCode dashKey = KeyCode.Mouse1;
-    public float  sliceDelay, sliceCd;
-    public int damage, criticalDamage;
-    private float sliceCdTimer;
+    public KeyCode sliceKey = KeyCode.Mouse1;
+    public float  sliceDelay, sliceCd, attackRange, leniancy, recharge;
+    public int damage, criticalDamage, maxDeflects;
+    int deflectsLeft;
+    private float sliceCdTimer, leniancyTimer, rechargeTimer;
 
-    void Start()
+    public Transform attackPoint;
+
+    public LayerMask enemyLayers;
+    void Awake()
     {
+        rechargeTimer = recharge;
+        leniancyTimer = leniancy;
         sliceCdTimer = sliceCd;
+        deflectsLeft = maxDeflects;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (rechargeTimer > 0)
+        {
+            rechargeTimer -= Time.deltaTime;
+        }
+        else if (rechargeTimer <= 0 && deflectsLeft < maxDeflects)
+        {
+           deflectsLeft++;
+        }
+        if (leniancyTimer > 0)
+        {
+           leniancyTimer -= Time.deltaTime;
+        }
+        else if (leniancyTimer <= 0)
+        {
+           DownSword();
+        }
         if (sliceCdTimer > 0)
         {
             sliceCdTimer -= Time.deltaTime;
             return;
         }
 
-        if (Input.GetKeyDown(dashKey) && !deflectionState)
+        if (Input.GetKeyDown(sliceKey) && !deflectionState)
         {
-            Debug.Log("Sword Swing");
+           sliceCdTimer = sliceCd;
+           Debug.Log("Sword Swing");
            Invoke(nameof(Slice), sliceDelay); 
         }
 
-        else if (Input.GetKeyDown(dashKey) && deflectionState)
-        { Invoke(nameof(Deflect), 0f); }
+        else if (Input.GetKeyDown(sliceKey) && deflectionState)
+        { 
+            Invoke(nameof(Deflect), 0f);
+            Debug.Log("Deflect");
+            sliceCdTimer = sliceCd;
+        }
     }
 
     void Slice()
     {
-        hitBoxActive = true;
+      Collider[] hitEnemies = Physics.OverlapSphere(attackPoint.position, attackRange, enemyLayers);
+        
+       foreach(Collider enemy in hitEnemies) 
+        {
+            enemy.GetComponent<EnemyHealthBar>().TakeDamage(damage);
+        } 
     }
     void Deflect()
     {
-
+        
+        if (deflectsLeft<= 0)
+        { return; }
+        leniancyTimer = leniancy;
+        rechargeTimer = recharge;
+        deflectsLeft--;
+        Debug.Log("Deflects left" + deflectsLeft);
     }
-    private void OnTriggerEnter(Collider other)
+
+    void DownSword()
     {
-        if (other.gameObject.tag == "Enemy" && hitBoxActive)
-        {
-            other.gameObject.GetComponent<EnemyHealthBar>().TakeDamage(damage);
-        }
-        hitBoxActive = false;
+        deflectionState = false;
+    }
+    public void DeflectState()
+    {
+        deflectionState = true;
+        leniancyTimer = leniancy;
+        Debug.Log(deflectionState);
+        
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null) { return; }
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

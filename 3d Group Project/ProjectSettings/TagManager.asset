@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Weak Point
+  - Sword
   layers:
   - Default
   - TransparentFX

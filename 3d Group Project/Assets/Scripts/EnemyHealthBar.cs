@@ -9,6 +9,7 @@ public class EnemyHealthBar : MonoBehaviour
     private int MaxHP;
     //Slider healthSlider;
     public bool isDead = false;
+    public int randomPoint;
     //public Canvas healthBar;
 
     private void Awake()
@@ -18,6 +19,8 @@ public class EnemyHealthBar : MonoBehaviour
         //healthSlider.maxValue = MaxHP;
        //healthSlider.value = hitpoints;
         //healthBar.enabled = false;
+
+        randomPoint = Random.Range(0, 6);
    
     }
 
@@ -44,4 +47,6 @@ public class EnemyHealthBar : MonoBehaviour
         //sleepText.SetText("ZZzz");
         //gameObject.GetComponent<EnemyNavMovement>().Sleeping();
     }
+
+    
 }
