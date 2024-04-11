@@ -6,19 +6,32 @@ public class EnemyAttackScript : MonoBehaviour
 {
     public int warnings = 3;
     private int currentWarning;
-    public float warningRate = 0.2f;
-    private float warningRateTimer;
+    public float warningRate, counterWindow;
+    private float warningRateTimer, counterWindowTimer, leniancy;
     [SerializeField] AudioSource warningSound;
     [SerializeField] AudioSource fire;
+    public SwordScript swordScript;
+    public GameObject player;
 
 
-   void Start()
-    {
+   void Awake()
+    { 
+        counterWindowTimer = counterWindow;
+        player = GameObject.FindGameObjectWithTag("Sword");
         currentWarning = warnings;
+        swordScript =  player.GetComponent<SwordScript>();
     }
 
     void Update()
-    {
+    {  
+        if (counterWindowTimer > 0)
+        { counterWindowTimer -= Time.deltaTime; }
+
+        if (currentWarning == 1)
+        { leniancy = 0.1f; }
+
+        else { leniancy = 0; }
+
         if(Input.GetButtonDown("Jump"))
             WindUp(); 
     }
@@ -35,12 +48,13 @@ public class EnemyAttackScript : MonoBehaviour
     {
        warningSound.Play();
        currentWarning--;
-       Invoke(nameof(WindUp), warningRate); 
+       Invoke(nameof(WindUp), warningRate - leniancy); 
     }
 
     void Attack()
     {
-       fire.Play();
+       swordScript.DeflectState(); ;
+       counterWindowTimer = counterWindow;
        currentWarning = warnings;
     } 
 }

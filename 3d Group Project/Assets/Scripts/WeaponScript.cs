@@ -71,7 +71,7 @@ public class WeaponScript : MonoBehaviour
         readyToShoot = false;
 
         Ray ray = fpsCam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-        RaycastHit hit;
+     //   RaycastHit hit;
 
         Vector3 targetPoint = ray.GetPoint(75f); ;
 
