@@ -44,7 +44,7 @@ public class DashScript : MonoBehaviour
         if (dashCdTimer > 0) return;
         else dashCdTimer = dashCd;
 
-
+        rb.drag = 0;
         rb.velocity = new Vector3(0f, 0f,0f);
         Vector3 forceToApply = orientation.forward * dashForce * 100f + orientation.up * dashUpwardForce * 10f;
 
