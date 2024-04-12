@@ -31,7 +31,7 @@ public class EnemyHealthBar : MonoBehaviour
         {
            // healthBar.enabled = true;
         }
-        hitpoints -= dmg;
+        //hitpoints -= dmg;
         //healthSlider.value = hitpoints;
 
         if (hitpoints <= 0 && !isDead)

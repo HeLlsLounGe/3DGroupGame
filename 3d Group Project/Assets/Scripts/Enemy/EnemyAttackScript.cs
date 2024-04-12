@@ -73,14 +73,14 @@ public class EnemyAttackScript : MonoBehaviour
 
     void Uncountered()
     {
-        //if (player.GetComponent<SwordScript>().lenleniancyTimer > 0)
+        if (player.GetComponent<SwordScript>().leniancyTimer > 0)
         {
             bulletState = false;
             playerReal.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);
         }
-        //else if (player.GetComponent<SwordScript>().lenleniancyTimer < 0 && player.GetComponent<SwordScript>.deflectionState = true())
+        else if (player.GetComponent<SwordScript>().leniancyTimer < 0 && player.GetComponent<SwordScript>().deflectionState == true)
         {
-           // Countered();
+           Countered();
         }
         bulletState = false;
     }

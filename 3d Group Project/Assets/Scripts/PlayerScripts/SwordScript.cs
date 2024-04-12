@@ -62,6 +62,8 @@ public class SwordScript : MonoBehaviour
             Debug.Log("Deflect");
             sliceCdTimer = sliceCd;
         }
+
+        Debug.Log("deflectionState " + deflectionState);
     }
 
     void Slice()
@@ -93,7 +95,6 @@ public class SwordScript : MonoBehaviour
     {
         deflectionState = true;
         leniancyTimer = leniancy;
-        Debug.Log(deflectionState);
         
     }
 
