@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyAttackScript : MonoBehaviour
 {
-    public int warnings = 3;
+    public int warnings, enemyDamage;
     private int currentWarning;
     public float warningRate, counterWindow;
     private float warningRateTimer, counterWindowTimer, leniancy;
@@ -12,12 +12,15 @@ public class EnemyAttackScript : MonoBehaviour
     [SerializeField] AudioSource fire;
     public SwordScript swordScript;
     public GameObject player;
+    public GameObject playerReal;
+    bool bulletState = false;
 
 
    void Awake()
     { 
         counterWindowTimer = counterWindow;
         player = GameObject.FindGameObjectWithTag("Sword");
+        playerReal = GameObject.FindGameObjectWithTag("Player");
         currentWarning = warnings;
         swordScript =  player.GetComponent<SwordScript>();
     }
@@ -26,6 +29,9 @@ public class EnemyAttackScript : MonoBehaviour
     {  
         if (counterWindowTimer > 0)
         { counterWindowTimer -= Time.deltaTime; }
+
+        else if (counterWindowTimer <= 0 && bulletState)
+        { Uncountered(); }
 
         if (currentWarning == 1)
         { leniancy = 0.1f; }
@@ -42,7 +48,7 @@ public class EnemyAttackScript : MonoBehaviour
         { Invoke(nameof(Sound),0f); }
 
         else if (currentWarning <= 0)
-        { Invoke(nameof(Attack),0f); }
+        { Invoke(nameof(Window),0f); }
     }
   void Sound()
     {
@@ -51,10 +57,31 @@ public class EnemyAttackScript : MonoBehaviour
        Invoke(nameof(WindUp), warningRate - leniancy); 
     }
 
-    void Attack()
+    void Window()
     {
-       swordScript.DeflectState(); ;
+       player.GetComponent<SwordScript>().target = gameObject;
+       swordScript.DeflectState(); 
        counterWindowTimer = counterWindow;
        currentWarning = warnings;
+        bulletState = true;
     } 
+    public void Countered()
+    {
+        bulletState = false;
+        GetComponent<EnemyHealthBar>().TakeDamage(enemyDamage);
+    }
+
+    void Uncountered()
+    {
+        //if (player.GetComponent<SwordScript>().lenleniancyTimer > 0)
+        {
+            bulletState = false;
+            playerReal.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);
+        }
+        //else if (player.GetComponent<SwordScript>().lenleniancyTimer < 0 && player.GetComponent<SwordScript>.deflectionState = true())
+        {
+           // Countered();
+        }
+        bulletState = false;
+    }
 }

@@ -19,12 +19,13 @@ public class AttackState : BaseState
 
     public override void Perform()
     {
+        Vector3 Lookpoint = new Vector3(enemy.Player.transform.position.x, enemy.transform.position.y, enemy.Player.transform.position.z);
         if (enemy.CanSeePlayer())
         {
             losePlayerTimer = 0;
             moveTimer += Time.deltaTime;
             shotTimer += Time.deltaTime;
-            enemy.transform.LookAt(enemy.Player.transform);
+            enemy.transform.LookAt(Lookpoint);
             if (shotTimer > enemy.fireRate)
             {
                 Shoot();

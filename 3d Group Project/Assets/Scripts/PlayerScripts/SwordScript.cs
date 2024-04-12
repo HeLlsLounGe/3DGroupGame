@@ -6,12 +6,14 @@ public class SwordScript : MonoBehaviour
 {
     public bool deflectionState = false;
     public KeyCode sliceKey = KeyCode.Mouse1;
-    public float  sliceDelay, sliceCd, attackRange, leniancy, recharge;
+    public float  sliceDelay, sliceCd, attackRange, leniancy, leniancyTimer, recharge;
     public int damage, criticalDamage, maxDeflects;
     int deflectsLeft;
-    private float sliceCdTimer, leniancyTimer, rechargeTimer;
+    private float sliceCdTimer, rechargeTimer;
 
     public Transform attackPoint;
+
+    public GameObject target;
 
     public LayerMask enemyLayers;
     void Awake()
@@ -80,6 +82,7 @@ public class SwordScript : MonoBehaviour
         rechargeTimer = recharge;
         deflectsLeft--;
         Debug.Log("Deflects left" + deflectsLeft);
+        target.GetComponent<EnemyAttackScript>().Countered();
     }
 
     void DownSword()

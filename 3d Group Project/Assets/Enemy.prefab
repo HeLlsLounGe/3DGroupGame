@@ -765,7 +765,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 2.1, z: 0.3}
+  m_Size: {x: 0.8, y: 2.15, z: 0.3}
   m_Center: {x: 0, y: -0.1, z: 0}
 --- !u!114 &1115245878
 MonoBehaviour:
@@ -813,6 +813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   warnings: 3
+  enemyDamage: 80
   warningRate: 0.25
   counterWindow: 0.2
   warningSound: {fileID: 6802784952650918897}
@@ -1042,7 +1043,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 1
+  m_BaseOffset: 1.16
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &1115245880

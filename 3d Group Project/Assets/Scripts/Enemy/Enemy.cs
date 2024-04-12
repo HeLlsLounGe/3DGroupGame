@@ -11,7 +11,9 @@ public class Enemy : MonoBehaviour
     private StateMachine stateMachine;
     private NavMeshAgent agent;
     private GameObject player;
+   // private GameObject self;
     public GameObject Player { get => player; }
+   // public GameObject Self { get => self; }
     public NavMeshAgent Agent { get => agent; }
     [Header("Sight Values")]
     [SerializeField]
@@ -30,6 +32,7 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         stateMachine.Initialise();
         player = GameObject.FindGameObjectWithTag("Player");
+       // self = GameObject.Find;
     }
 
 
