@@ -1309,7 +1309,7 @@ PrefabInstance:
       objectReference: {fileID: 1405817264}
     - target: {fileID: 1694788164, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
       propertyPath: leniancy
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 8815322699251828356, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
       propertyPath: m_Name

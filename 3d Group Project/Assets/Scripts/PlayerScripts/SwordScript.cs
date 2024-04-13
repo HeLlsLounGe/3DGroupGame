@@ -5,6 +5,7 @@ using UnityEngine;
 public class SwordScript : MonoBehaviour
 {
     public bool deflectionState = false;
+    bool flipper = false;
     public KeyCode sliceKey = KeyCode.Mouse1;
     public float  sliceDelay, sliceCd, attackRange, leniancy, leniancyTimer, recharge;
     public int damage, criticalDamage, maxDeflects;
@@ -19,7 +20,7 @@ public class SwordScript : MonoBehaviour
     void Awake()
     {
         rechargeTimer = recharge;
-        leniancyTimer = leniancy;
+        leniancyTimer = 0;
         sliceCdTimer = sliceCd;
         deflectsLeft = maxDeflects;
     }
@@ -39,7 +40,7 @@ public class SwordScript : MonoBehaviour
         {
            leniancyTimer -= Time.deltaTime;
         }
-        else if (leniancyTimer <= 0)
+        else if (leniancyTimer <= 0 && !flipper)
         {
            DownSword();
         }
@@ -63,7 +64,7 @@ public class SwordScript : MonoBehaviour
             sliceCdTimer = sliceCd;
         }
 
-        Debug.Log("deflectionState " + deflectionState);
+        //Debug.Log("deflectionState " + deflectionState);
     }
 
     void Slice()
@@ -81,6 +82,7 @@ public class SwordScript : MonoBehaviour
         if (deflectsLeft<= 0)
         { return; }
         leniancyTimer = leniancy;
+        flipper = false;
         rechargeTimer = recharge;
         deflectsLeft--;
         Debug.Log("Deflects left" + deflectsLeft);
@@ -93,8 +95,8 @@ public class SwordScript : MonoBehaviour
     }
     public void DeflectState()
     {
+        flipper = true;
         deflectionState = true;
-        leniancyTimer = leniancy;
         
     }
 

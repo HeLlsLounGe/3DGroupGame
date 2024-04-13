@@ -63,7 +63,7 @@ public class EnemyAttackScript : MonoBehaviour
        swordScript.DeflectState(); 
        counterWindowTimer = counterWindow;
        currentWarning = warnings;
-        bulletState = true;
+       bulletState = true;
     } 
     public void Countered()
     {
@@ -73,12 +73,12 @@ public class EnemyAttackScript : MonoBehaviour
 
     void Uncountered()
     {
-        if (player.GetComponent<SwordScript>().leniancyTimer > 0)
+        if (swordScript.leniancyTimer <= 0)
         {
             bulletState = false;
             playerReal.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);
         }
-        else if (player.GetComponent<SwordScript>().leniancyTimer < 0 && player.GetComponent<SwordScript>().deflectionState == true)
+        else if (swordScript.leniancyTimer > 0)
         {
            Countered();
         }
