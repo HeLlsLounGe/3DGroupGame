@@ -10,6 +10,9 @@ public class EnemyHealthBar : MonoBehaviour
     //Slider healthSlider;
     public bool isDead = false;
     public int randomPoint;
+    StateMachine stateMachine;
+    Enemy enemy;
+    EnemyAttackScript enemyAttackScript;
     //public Canvas healthBar;
 
     private void Awake()
@@ -17,7 +20,7 @@ public class EnemyHealthBar : MonoBehaviour
         //healthSlider = GetComponentInChildren<Slider>();
         MaxHP = hitpoints;
         //healthSlider.maxValue = MaxHP;
-       //healthSlider.value = hitpoints;
+        //healthSlider.value = hitpoints;
         //healthBar.enabled = false;
 
         randomPoint = Random.Range(0, 6);
@@ -31,20 +34,27 @@ public class EnemyHealthBar : MonoBehaviour
         {
            // healthBar.enabled = true;
         }
-        hitpoints -= dmg;
+        //hitpoints -= dmg;
         //healthSlider.value = hitpoints;
 
         if (hitpoints <= 0 && !isDead)
         {
             isDead = true;
-            Invoke("EnemyLost", 0f);
+            Invoke("EnemyDead", 0f);
         }
     }
-    private void EnemyLost()
+    private void EnemyDead()
     {
         Debug.Log("Dead");
-        //sleepText.SetText("ZZzz");
-        //gameObject.GetComponent<EnemyNavMovement>().Sleeping();
+        stateMachine = GetComponent<StateMachine>();
+        enemy = GetComponent<Enemy>();
+        enemyAttackScript= GetComponent<EnemyAttackScript>();
+       
+        stateMachine.enabled= false;
+        enemyAttackScript.enabled= false;
+        enemy.enabled= false;
+        
+        
     }
 
     

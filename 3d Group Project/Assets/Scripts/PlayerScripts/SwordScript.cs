@@ -5,19 +5,22 @@ using UnityEngine;
 public class SwordScript : MonoBehaviour
 {
     public bool deflectionState = false;
+    bool flipper = false;
     public KeyCode sliceKey = KeyCode.Mouse1;
-    public float  sliceDelay, sliceCd, attackRange, leniancy, recharge;
+    public float  sliceDelay, sliceCd, attackRange, leniancy, leniancyTimer, recharge;
     public int damage, criticalDamage, maxDeflects;
     int deflectsLeft;
-    private float sliceCdTimer, leniancyTimer, rechargeTimer;
+    private float sliceCdTimer, rechargeTimer;
 
     public Transform attackPoint;
+
+    public GameObject target;
 
     public LayerMask enemyLayers;
     void Awake()
     {
         rechargeTimer = recharge;
-        leniancyTimer = leniancy;
+        leniancyTimer = 0;
         sliceCdTimer = sliceCd;
         deflectsLeft = maxDeflects;
     }
@@ -37,7 +40,7 @@ public class SwordScript : MonoBehaviour
         {
            leniancyTimer -= Time.deltaTime;
         }
-        else if (leniancyTimer <= 0)
+        else if (leniancyTimer <= 0 && !flipper)
         {
            DownSword();
         }
@@ -77,9 +80,11 @@ public class SwordScript : MonoBehaviour
         if (deflectsLeft<= 0)
         { return; }
         leniancyTimer = leniancy;
+        flipper = false;
         rechargeTimer = recharge;
         deflectsLeft--;
         Debug.Log("Deflects left" + deflectsLeft);
+        target.GetComponent<EnemyAttackScript>().Countered();
     }
 
     void DownSword()
@@ -88,9 +93,8 @@ public class SwordScript : MonoBehaviour
     }
     public void DeflectState()
     {
+        flipper = true;
         deflectionState = true;
-        leniancyTimer = leniancy;
-        Debug.Log(deflectionState);
         
     }
 
