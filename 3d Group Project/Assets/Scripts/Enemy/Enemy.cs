@@ -8,6 +8,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    private EnemyAttackScript enemyAttackScript;
     private StateMachine stateMachine;
     private NavMeshAgent agent;
     private GameObject player;
@@ -19,7 +20,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     public Path path;
     public float sightDistance = 20;
-    public float fieldOfView = 85;
+    public float fieldOfView = 180;
     public float eyeHeight;
     [Header("Weapon Values")]
     public Transform gunBarrel;
@@ -32,7 +33,7 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         stateMachine.Initialise();
         player = GameObject.FindGameObjectWithTag("Player");
-       // self = GameObject.Find;
+        enemyAttackScript = GetComponent<EnemyAttackScript>();   
     }
 
 
@@ -69,5 +70,9 @@ public class Enemy : MonoBehaviour
         }
         return false;
 
+    }
+    public void Fire()
+    {
+       enemyAttackScript.WindUp();
     }
 }

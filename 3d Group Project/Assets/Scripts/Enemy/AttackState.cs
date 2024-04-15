@@ -7,6 +7,9 @@ public class AttackState : BaseState
     private float moveTimer;
     private float losePlayerTimer;
     private float shotTimer;
+    
+
+   
     public override void Enter()
     {
 
@@ -26,6 +29,8 @@ public class AttackState : BaseState
             moveTimer += Time.deltaTime;
             shotTimer += Time.deltaTime;
             enemy.transform.LookAt(Lookpoint);
+
+
             if (shotTimer > enemy.fireRate)
             {
                 Shoot();
@@ -48,11 +53,13 @@ public class AttackState : BaseState
     }
     public void Shoot()
     {
+        enemy.Fire();
+        shotTimer = 0;
         //Transform gunbarrel = enemy.gunBarrel;
         //GameObject bullet = GameObject.Instantiate(Resources.Load("Prefabs/Bullet") as GameObject, gunbarrel.position, enemy.transform.rotation);
         //Vector3 shootDirection = (enemy.Player.transform.position - gunbarrel.transform.position).normalized;
         //bullet.GetComponent<Rigidbody>().velocity = shootDirection * 40;
-        //shotTimer = 0;
+        
     }
 
     // Start is called before the first frame update

@@ -15,6 +15,8 @@ public class EnemyAttackScript : MonoBehaviour
     public GameObject playerReal;
     bool bulletState = false;
 
+    LineBehavior lineBehavior;
+
 
    void Awake()
     { 
@@ -23,6 +25,7 @@ public class EnemyAttackScript : MonoBehaviour
         playerReal = GameObject.FindGameObjectWithTag("Player");
         currentWarning = warnings;
         swordScript =  player.GetComponent<SwordScript>();
+        lineBehavior = GetComponentInChildren<LineBehavior>();
     }
 
     void Update()
@@ -69,14 +72,16 @@ public class EnemyAttackScript : MonoBehaviour
     {
         bulletState = false;
         GetComponent<EnemyHealthBar>().TakeDamage(enemyDamage);
+        lineBehavior.DeflectedLineDraw();
     }
 
     void Uncountered()
     {
-        if (swordScript.leniancyTimer <= 0)
+        if (swordScript.leniancyTimer <= 0 && bulletState)
         {
             bulletState = false;
             playerReal.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);
+            lineBehavior.UndeflectedLineDraw();
         }
         else if (swordScript.leniancyTimer > 0)
         {
