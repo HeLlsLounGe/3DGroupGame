@@ -6,19 +6,23 @@ public class EnemyHealthBar : MonoBehaviour
 {
     [Header("Attributes")]
     [SerializeField] private int hitpoints = 50;
-    private int MaxHP;
+    [SerializeField] private int switchPoint;
+    private int MaxHP, switchTimer;
     //Slider healthSlider;
     public bool isDead = false;
     public int randomPoint;
     StateMachine stateMachine;
     Enemy enemy;
     EnemyAttackScript enemyAttackScript;
+    WeakPointManager[] weakPointManagers;
     //public Canvas healthBar;
 
     private void Awake()
     {
+        weakPointManagers = GetComponentsInChildren<WeakPointManager>();
         //healthSlider = GetComponentInChildren<Slider>();
         MaxHP = hitpoints;
+        switchTimer = switchPoint;
         //healthSlider.maxValue = MaxHP;
         //healthSlider.value = hitpoints;
         //healthBar.enabled = false;
@@ -30,6 +34,17 @@ public class EnemyHealthBar : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         hitpoints -= dmg;
+        switchTimer -= dmg;
+        if (switchTimer <= 0)
+        { 
+            randomPoint = Random.Range(0, 6);
+            switchTimer = switchPoint;
+
+            for (int i = 0; i < weakPointManagers.Length; i++)
+            {
+                weakPointManagers[i].WeakPointAssign();
+            }
+        }
         //if (hitpoints == healthSlider.maxValue)
         {
            // healthBar.enabled = true;

@@ -20,16 +20,22 @@ public class WeakPointManager : MonoBehaviour
         collider2.enabled = false;
         SR.enabled = false;
         healthScript = GetComponentInParent<EnemyHealthBar>();
-        //WeakPointAssign();
+        WeakPointAssign();
        
     }
-    public void Update()
+    public void WeakPointAssign()
     {
         if (WeakPointValue == healthScript.randomPoint)
         {
            SR.enabled = true;
            collider1.enabled = true;
            collider2.enabled = true;
+        }
+        else
+        {
+            collider1.enabled = false;
+            collider2.enabled = false;
+            SR.enabled = false;
         }
     }
 }
