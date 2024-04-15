@@ -1225,7 +1225,7 @@ MonoBehaviour:
   deflectPoint: {x: 0, y: 0, z: 0}
   enemyBody: {x: 0, y: 0, z: 0}
   playerBody: {x: 0, y: 0, z: 0}
-  laserDuration: 0.3
+  laserDuration: 0.1
 --- !u!4 &1915179014 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8815322699377439081, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
