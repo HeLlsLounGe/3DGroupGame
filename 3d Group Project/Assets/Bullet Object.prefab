@@ -201,7 +201,7 @@ MonoBehaviour:
   bounciness: 0
   useGravity: 0
   explosionDamage: 10
-  weakPointDamage: 80
+  weakPointDamage: 40
   explosionRange: 0.1
   maxCollisions: 1
   maxLifeTime: 5
