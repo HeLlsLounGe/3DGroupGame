@@ -11,6 +11,7 @@ public class EnemyHealthBar : MonoBehaviour
     //Slider healthSlider;
     public bool isDead = false;
     public int randomPoint;
+    Animator animator;
     StateMachine stateMachine;
     Enemy enemy;
     EnemyAttackScript enemyAttackScript;
@@ -23,6 +24,7 @@ public class EnemyHealthBar : MonoBehaviour
         //healthSlider = GetComponentInChildren<Slider>();
         MaxHP = hitpoints;
         switchTimer = switchPoint;
+        animator = GetComponentInChildren<Animator>();
         //healthSlider.maxValue = MaxHP;
         //healthSlider.value = hitpoints;
         //healthBar.enabled = false;
@@ -68,6 +70,7 @@ public class EnemyHealthBar : MonoBehaviour
         stateMachine.enabled= false;
         enemyAttackScript.enabled= false;
         enemy.enabled= false;
+        animator.SetTrigger("Fall");
         
         
     }
