@@ -40,9 +40,6 @@ public class EnemyAttackScript : MonoBehaviour
         { leniancy = 0.1f; }
 
         else { leniancy = 0; }
-
-        if(Input.GetKeyDown("q"))
-            WindUp(); 
     }
 
   public void WindUp()

@@ -54,7 +54,7 @@ public class WeaponScript : MonoBehaviour
         else shooting = Input.GetKeyDown(KeyCode.Mouse0);
 
 
-        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
+   
 
         if (readyToShoot && shooting && !reloading && bulletsLeft <= 0) Reload();
 
@@ -106,6 +106,9 @@ public class WeaponScript : MonoBehaviour
         }
         if (muzzleFlash != null)
             Instantiate(muzzleFlash, attackPoint.position, Quaternion.identity);
+
+        if (bulletsLeft == 0)
+        { Reload(); }
     }
 
     private void ResetShot()
