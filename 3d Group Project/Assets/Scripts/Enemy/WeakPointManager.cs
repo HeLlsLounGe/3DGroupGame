@@ -38,4 +38,8 @@ public class WeakPointManager : MonoBehaviour
             SR.enabled = false;
         }
     }
+    public void KillFunction()
+    {
+       Destroy(gameObject);
+    }
 }

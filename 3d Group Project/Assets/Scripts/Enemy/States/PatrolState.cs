@@ -15,6 +15,7 @@ public class PatrolState : BaseState
         PatrolCycle();
         if (enemy.CanSeePlayer())
         {
+           
             stateMachine.ChangeState(new AttackState());
         }
     }
@@ -26,6 +27,7 @@ public class PatrolState : BaseState
     {
         if (enemy.Agent.remainingDistance < 0.2f)
         {
+            
             waitTimer += Time.deltaTime;
             if (waitTimer > 3)
             {
@@ -34,7 +36,10 @@ public class PatrolState : BaseState
                 else
                     waypointIndex = 0;
                 enemy.Agent.SetDestination(enemy.path.waypoints[waypointIndex].position);
+                enemy.transform.LookAt(enemy.path.waypoints[waypointIndex].position);
                 waitTimer = 0;
+
+               
             }
         }
     }

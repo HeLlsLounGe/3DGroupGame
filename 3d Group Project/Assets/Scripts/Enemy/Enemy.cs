@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     private StateMachine stateMachine;
     private NavMeshAgent agent;
     private GameObject player;
+    public Animator animator;
    // private GameObject self;
     public GameObject Player { get => player; }
    // public GameObject Self { get => self; }
@@ -33,7 +34,8 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         stateMachine.Initialise();
         player = GameObject.FindGameObjectWithTag("Player");
-        enemyAttackScript = GetComponent<EnemyAttackScript>();   
+        enemyAttackScript = GetComponent<EnemyAttackScript>(); 
+        animator = GetComponent<Animator>();
     }
 
 
