@@ -26,6 +26,7 @@ public class EnemyAttackScript : MonoBehaviour
         currentWarning = warnings;
         swordScript =  player.GetComponent<SwordScript>();
         lineBehavior = GetComponentInChildren<LineBehavior>();
+        lineBehavior.enabled = false;
     }
 
     void Update()
@@ -67,6 +68,7 @@ public class EnemyAttackScript : MonoBehaviour
     } 
     public void Countered()
     {
+        lineBehavior.enabled = true;
         bulletState = false;
         GetComponent<EnemyHealthBar>().TakeDamage(enemyDamage);
         lineBehavior.DeflectedLineDraw();
@@ -78,6 +80,7 @@ public class EnemyAttackScript : MonoBehaviour
         {
             bulletState = false;
             playerReal.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);
+            lineBehavior.enabled = true;
             lineBehavior.UndeflectedLineDraw();
         }
         else if (swordScript.leniancyTimer > 0)

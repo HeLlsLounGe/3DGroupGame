@@ -26,6 +26,9 @@ public class Enemy : MonoBehaviour
     [Header("Weapon Values")]
     public Transform gunBarrel;
     [Range(0.1f, 10)]
+    public float fireRateUpper;
+    [Range(0.1f, 10)]
+    public float fireRateLower;
     public float fireRate;
     private string currentState;
     void Start()
@@ -36,6 +39,7 @@ public class Enemy : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         enemyAttackScript = GetComponent<EnemyAttackScript>(); 
         animator = GetComponent<Animator>();
+        fireRate = Random.Range(fireRateUpper, fireRateLower);
     }
 
 
