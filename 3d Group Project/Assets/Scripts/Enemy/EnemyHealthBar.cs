@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyHealthBar : MonoBehaviour
 {
@@ -11,10 +12,13 @@ public class EnemyHealthBar : MonoBehaviour
     //Slider healthSlider;
     public bool isDead = false;
     public int randomPoint;
+    NavMeshAgent agent;
+    Animator animator;
     StateMachine stateMachine;
     Enemy enemy;
     EnemyAttackScript enemyAttackScript;
     WeakPointManager[] weakPointManagers;
+    BoxCollider[] boxCollider;
     //public Canvas healthBar;
 
     private void Awake()
@@ -23,6 +27,7 @@ public class EnemyHealthBar : MonoBehaviour
         //healthSlider = GetComponentInChildren<Slider>();
         MaxHP = hitpoints;
         switchTimer = switchPoint;
+        animator = GetComponentInChildren<Animator>();
         //healthSlider.maxValue = MaxHP;
         //healthSlider.value = hitpoints;
         //healthBar.enabled = false;
@@ -64,10 +69,22 @@ public class EnemyHealthBar : MonoBehaviour
         stateMachine = GetComponent<StateMachine>();
         enemy = GetComponent<Enemy>();
         enemyAttackScript= GetComponent<EnemyAttackScript>();
+        agent = GetComponent<NavMeshAgent>(); 
+        boxCollider = GetComponents<BoxCollider>();
        
         stateMachine.enabled= false;
         enemyAttackScript.enabled= false;
         enemy.enabled= false;
+        agent.enabled= false;
+        for (int i = 0; i < boxCollider.Length; i++)
+        {
+            boxCollider[i].enabled= false;
+        }
+        for (int i = 0; i < weakPointManagers.Length; i++)
+        {
+            weakPointManagers[i].KillFunction();
+        }
+        animator.SetTrigger("Fall");
         
         
     }

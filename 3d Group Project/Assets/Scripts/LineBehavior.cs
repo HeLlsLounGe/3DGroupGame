@@ -54,5 +54,6 @@ public class LineBehavior : MonoBehaviour
         bulletLine.useWorldSpace = false;
         bulletLine.enabled = false;
         bulletLine.positionCount = 0;
+        this.enabled = false;
     }
 }
