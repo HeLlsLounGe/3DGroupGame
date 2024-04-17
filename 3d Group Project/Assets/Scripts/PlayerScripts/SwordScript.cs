@@ -17,6 +17,7 @@ public class SwordScript : MonoBehaviour
 
     public GameObject target, katana;
 
+    DashScript dashScript;
     public LayerMask enemyLayers;
     void Awake()
     {
@@ -26,6 +27,7 @@ public class SwordScript : MonoBehaviour
         sliceCdTimer = sliceCd;
         deflectsLeft = maxDeflects;
         animator = katana.GetComponent<Animator>();
+        dashScript = GetComponentInParent<DashScript>();
         
     }
 
@@ -77,7 +79,14 @@ public class SwordScript : MonoBehaviour
         
        foreach(Collider enemy in hitEnemies) 
         {
-            enemy.GetComponent<EnemyHealthBar>().TakeDamage(damage);
+            if (dashScript.isDashing == true)
+            { 
+                enemy.GetComponent<EnemyHealthBar>().TakeDamage(criticalDamage);
+            }
+            else
+            {
+                enemy.GetComponent<EnemyHealthBar>().TakeDamage(damage);
+            }
         } 
     }
     void Deflect()
