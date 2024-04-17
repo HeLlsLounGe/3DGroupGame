@@ -51,10 +51,10 @@ public class SwordScript : MonoBehaviour
         if (sliceCdTimer > 0)
         {
             sliceCdTimer -= Time.deltaTime;
-            return;
+    
         }
 
-        if (Input.GetKeyDown(sliceKey) && !deflectionState)
+        if (Input.GetKeyDown(sliceKey) && !deflectionState && sliceCdTimer <= 0)
         {
            sliceCdTimer = sliceCd;
            Debug.Log("Sword Swing");
@@ -62,7 +62,7 @@ public class SwordScript : MonoBehaviour
            Invoke(nameof(Slice), sliceDelay); 
         }
 
-        else if (Input.GetKeyDown(sliceKey) && deflectionState)
+        else if (Input.GetKeyDown(sliceKey) && deflectionState && sliceCdTimer <= 0)
         { 
             Invoke(nameof(Deflect), 0f);
             Debug.Log("Deflect");
