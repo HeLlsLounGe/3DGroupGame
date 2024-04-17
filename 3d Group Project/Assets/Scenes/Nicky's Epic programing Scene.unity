@@ -1549,6 +1549,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 457945065, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.114
+      objectReference: {fileID: 0}
+    - target: {fileID: 457945065, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.449
+      objectReference: {fileID: 0}
+    - target: {fileID: 457945065, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.18
+      objectReference: {fileID: 0}
     - target: {fileID: 615755156, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.006
@@ -1572,6 +1584,10 @@ PrefabInstance:
     - target: {fileID: 1038179090, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038179090, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.2379999
       objectReference: {fileID: 0}
     - target: {fileID: 1038179091, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
       propertyPath: bullet
@@ -1620,6 +1636,10 @@ PrefabInstance:
     - target: {fileID: 1908269266, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1908269266, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.2379999
       objectReference: {fileID: 0}
     - target: {fileID: 1908269267, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
       propertyPath: bullet
@@ -1689,6 +1709,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 116.118
       objectReference: {fileID: 0}
+    - target: {fileID: 3199833179220509784, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
+      propertyPath: m_TagString
+      value: Katana
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082449257489199999, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082449257489199999, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082449257489199999, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082449257489199999, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.789
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082449257489199999, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.178
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082449257489199999, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.416
+      objectReference: {fileID: 0}
     - target: {fileID: 8815322699251828356, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
       propertyPath: m_Name
       value: Player character
@@ -1748,6 +1796,10 @@ PrefabInstance:
     - target: {fileID: 8815322699748999206, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815322699748999206, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.2379999
       objectReference: {fileID: 0}
     - target: {fileID: 8815322699748999206, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
       propertyPath: m_LocalPosition.y

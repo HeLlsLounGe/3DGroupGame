@@ -8,6 +8,7 @@ TagManager:
   - Weak Point
   - Sword
   - DeflectPoint
+  - Katana
   layers:
   - Default
   - TransparentFX
