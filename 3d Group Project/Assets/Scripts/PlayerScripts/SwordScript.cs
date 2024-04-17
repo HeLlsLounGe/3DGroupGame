@@ -11,18 +11,22 @@ public class SwordScript : MonoBehaviour
     public int damage, criticalDamage, maxDeflects;
     int deflectsLeft;
     private float sliceCdTimer, rechargeTimer;
+    public Animator animator;
 
     public Transform attackPoint;
 
-    public GameObject target;
+    public GameObject target, katana;
 
     public LayerMask enemyLayers;
     void Awake()
     {
+        katana = GameObject.FindGameObjectWithTag("Katana");
         rechargeTimer = recharge;
         leniancyTimer = 0;
         sliceCdTimer = sliceCd;
         deflectsLeft = maxDeflects;
+        animator = katana.GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -47,20 +51,22 @@ public class SwordScript : MonoBehaviour
         if (sliceCdTimer > 0)
         {
             sliceCdTimer -= Time.deltaTime;
-            return;
+    
         }
 
-        if (Input.GetKeyDown(sliceKey) && !deflectionState)
+        if (Input.GetKeyDown(sliceKey) && !deflectionState && sliceCdTimer <= 0)
         {
            sliceCdTimer = sliceCd;
            Debug.Log("Sword Swing");
+           animator.SetTrigger("Slash");
            Invoke(nameof(Slice), sliceDelay); 
         }
 
-        else if (Input.GetKeyDown(sliceKey) && deflectionState)
+        else if (Input.GetKeyDown(sliceKey) && deflectionState && sliceCdTimer <= 0)
         { 
             Invoke(nameof(Deflect), 0f);
             Debug.Log("Deflect");
+            animator.SetTrigger("Deflect");
             sliceCdTimer = sliceCd;
         }
     }
@@ -90,6 +96,7 @@ public class SwordScript : MonoBehaviour
     void DownSword()
     {
         deflectionState = false;
+        animator.SetTrigger("DownSword");
     }
     public void DeflectState()
     {

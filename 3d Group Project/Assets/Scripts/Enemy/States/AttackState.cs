@@ -47,6 +47,7 @@ public class AttackState : BaseState
             if (losePlayerTimer > 8)
             {
                 //Change to search state
+                enemy.AttackScriptDisable();
                 stateMachine.ChangeState(new PatrolState());
             }
         }

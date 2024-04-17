@@ -200,8 +200,8 @@ MonoBehaviour:
     m_Bits: 64
   bounciness: 0
   useGravity: 0
-  explosionDamage: 3
-  weakPointDamage: 10
+  explosionDamage: 2
+  weakPointDamage: 8
   explosionRange: 0.1
   maxCollisions: 1
   maxLifeTime: 5

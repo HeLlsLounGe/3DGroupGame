@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
     public float fireRateLower;
     public float fireRate;
     private string currentState;
-    void Start()
+    void Awake()
     {
         stateMachine = GetComponent<StateMachine>();
         agent = GetComponent<NavMeshAgent>();
@@ -40,6 +40,7 @@ public class Enemy : MonoBehaviour
         enemyAttackScript = GetComponent<EnemyAttackScript>(); 
         animator = GetComponent<Animator>();
         fireRate = Random.Range(fireRateUpper, fireRateLower);
+        enemyAttackScript.enabled = false;
     }
 
 
@@ -80,5 +81,14 @@ public class Enemy : MonoBehaviour
     public void Fire()
     {
        enemyAttackScript.WindUp();
+    }
+
+    public void AttackScriptDisable()
+    {
+        enemyAttackScript.enabled = false;
+    }
+    public void AttackScriptEnable()
+    {
+        enemyAttackScript.enabled = true;
     }
 }
