@@ -15,7 +15,7 @@ public class PatrolState : BaseState
         PatrolCycle();
         if (enemy.CanSeePlayer())
         {
-           
+            enemy.AttackScriptEnable();
             stateMachine.ChangeState(new AttackState());
         }
     }
