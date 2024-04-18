@@ -99,6 +99,8 @@ public class SwordScript : MonoBehaviour
         rechargeTimer = recharge;
         deflectsLeft--;
         Debug.Log("Deflects left" + deflectsLeft);
+        if (target.GetComponent<EnemyAttackScript>().bulletState == false)
+        { return; }
         target.GetComponent<EnemyAttackScript>().Countered();
     }
 

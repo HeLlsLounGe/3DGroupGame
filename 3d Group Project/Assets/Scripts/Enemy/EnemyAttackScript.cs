@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyAttackScript : MonoBehaviour
 {
     public int warnings, enemyDamage;
-    private int currentWarning;
+    private int currentWarning, burstnumber;
     public float warningRate, counterWindow;
     private float warningRateTimer, counterWindowTimer, leniancy;
     [SerializeField] AudioSource warningSound;
@@ -15,7 +15,7 @@ public class EnemyAttackScript : MonoBehaviour
     public GameObject brainObject;
     public GameObject player;
     public GameObject playerReal;
-    bool bulletState = false;
+    public bool bulletState = false;
     public bool firingState = false;
 
     LineBehavior lineBehavior;
