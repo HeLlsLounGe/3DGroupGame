@@ -11,9 +11,12 @@ public class EnemyAttackScript : MonoBehaviour
     [SerializeField] AudioSource warningSound;
     [SerializeField] AudioSource fire;
     public SwordScript swordScript;
+    public CollectiveEnemyBrain brain;
+    public GameObject brainObject;
     public GameObject player;
     public GameObject playerReal;
     bool bulletState = false;
+    public bool firingState = false;
 
     LineBehavior lineBehavior;
 
@@ -23,8 +26,10 @@ public class EnemyAttackScript : MonoBehaviour
         counterWindowTimer = counterWindow;
         player = GameObject.FindGameObjectWithTag("Sword");
         playerReal = GameObject.FindGameObjectWithTag("Player");
+        brainObject = GameObject.FindGameObjectWithTag("EnemyBrain");
         currentWarning = warnings;
         swordScript =  player.GetComponent<SwordScript>();
+        brain = brainObject.GetComponent<CollectiveEnemyBrain>();
         lineBehavior = GetComponentInChildren<LineBehavior>();
         lineBehavior.enabled = false;
     }
@@ -43,13 +48,28 @@ public class EnemyAttackScript : MonoBehaviour
         else { leniancy = 0; }
     }
 
+    public void PreWindUp()
+    {
+        if (brain.canFire)
+        {
+            WindUp();
+        }
+
+        else
+        {
+            Invoke("Retry", 2.0f);
+        }
+    }
+
   public void WindUp()
     {
-        if (currentWarning > 0)
-        { Invoke(nameof(Sound),0f); }
+            brain.HasFired();
+            firingState = true;
+            if (currentWarning > 0)
+            { Invoke(nameof(Sound), 0f); }
 
-        else if (currentWarning <= 0)
-        { Invoke(nameof(Window),0f); }
+            else if (currentWarning <= 0)
+            { Invoke(nameof(Window), 0f); }   
     }
   void Sound()
     {
@@ -71,7 +91,9 @@ public class EnemyAttackScript : MonoBehaviour
         lineBehavior.enabled = true;
         bulletState = false;
         GetComponent<EnemyHealthBar>().TakeDamage(enemyDamage);
+        firingState = false;
         lineBehavior.DeflectedLineDraw();
+        brain.CanFireAgain();
     }
 
     void Uncountered()
@@ -81,12 +103,19 @@ public class EnemyAttackScript : MonoBehaviour
             bulletState = false;
             playerReal.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);
             lineBehavior.enabled = true;
+            firingState = false;
             lineBehavior.UndeflectedLineDraw();
+            brain.CanFireAgain();
         }
         else if (swordScript.leniancyTimer > 0)
         {
            Countered();
         }
         bulletState = false;
+    }
+
+    void Retry()
+    {
+        PreWindUp();
     }
 }

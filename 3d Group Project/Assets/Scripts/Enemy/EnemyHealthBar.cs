@@ -12,17 +12,22 @@ public class EnemyHealthBar : MonoBehaviour
     //Slider healthSlider;
     public bool isDead = false;
     public int randomPoint;
+    GameObject enemyBrain;
+    CollectiveEnemyBrain brain;
     NavMeshAgent agent;
     Animator animator;
     StateMachine stateMachine;
     Enemy enemy;
     EnemyAttackScript enemyAttackScript;
+    EnemyMovementTracker movementTracker;
     WeakPointManager[] weakPointManagers;
     BoxCollider[] boxCollider;
     //public Canvas healthBar;
 
     private void Awake()
     {
+        enemyBrain = GameObject.FindWithTag("EnemyBrain");
+        brain = enemyBrain.GetComponent<CollectiveEnemyBrain>();
         weakPointManagers = GetComponentsInChildren<WeakPointManager>();
         //healthSlider = GetComponentInChildren<Slider>();
         MaxHP = hitpoints;
@@ -66,16 +71,23 @@ public class EnemyHealthBar : MonoBehaviour
     private void EnemyDead()
     {
         Debug.Log("Dead");
+
+        brain.CanFireAgain();
+
         stateMachine = GetComponent<StateMachine>();
         enemy = GetComponent<Enemy>();
         enemyAttackScript= GetComponent<EnemyAttackScript>();
-        agent = GetComponent<NavMeshAgent>(); 
+        agent = GetComponent<NavMeshAgent>();
+        movementTracker = GetComponent<EnemyMovementTracker>();
         boxCollider = GetComponents<BoxCollider>();
-       
         stateMachine.enabled= false;
         enemyAttackScript.enabled= false;
+
+        brain.CanFireAgain();
+
         enemy.enabled= false;
         agent.enabled= false;
+        movementTracker.enabled = false;
         for (int i = 0; i < boxCollider.Length; i++)
         {
             boxCollider[i].enabled= false;

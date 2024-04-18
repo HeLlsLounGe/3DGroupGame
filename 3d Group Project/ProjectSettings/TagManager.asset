@@ -9,6 +9,7 @@ TagManager:
   - Sword
   - DeflectPoint
   - Katana
+  - EnemyBrain
   layers:
   - Default
   - TransparentFX
