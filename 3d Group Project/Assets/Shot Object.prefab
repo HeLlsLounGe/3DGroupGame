@@ -204,5 +204,5 @@ MonoBehaviour:
   weakPointDamage: 8
   explosionRange: 0.1
   maxCollisions: 1
-  maxLifeTime: 5
+  maxLifeTime: 0.5
   explodeOnTouch: 1
