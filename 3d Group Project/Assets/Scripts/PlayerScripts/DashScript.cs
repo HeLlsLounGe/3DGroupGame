@@ -62,7 +62,7 @@ public class DashScript : MonoBehaviour
     private void MaxSpeed()
     {
        
-        Vector3 FlatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        Vector3 FlatVel = new Vector3(rb.velocity.x, rb.velocity.y, rb.velocity.z);
         if (FlatVel.magnitude > maxSpeed)
         {
             Vector3 limitedVel = FlatVel.normalized * maxSpeed;
