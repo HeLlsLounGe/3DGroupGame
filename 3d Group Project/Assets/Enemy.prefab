@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1833201976}
   - component: {fileID: 1833201977}
-  - component: {fileID: 1444607680}
+  - component: {fileID: 6529257382455560728}
   m_Layer: 6
   m_Name: firingpoint
   m_TagString: Untagged
@@ -142,7 +142,7 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 0
   m_Loop: 0
---- !u!114 &1444607680
+--- !u!114 &6529257382455560728
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,7 +158,7 @@ MonoBehaviour:
   deflectPoint: {x: 0, y: 0, z: 0}
   enemyBody: {x: 0, y: 0, z: 0}
   playerBody: {x: 0, y: 0, z: 0}
-  laserDuration: 0.05
+  laserDuration: 0.1
 --- !u!1 &1416229631216908666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,8 +1100,11 @@ MonoBehaviour:
   warningSound: {fileID: 6802784952650918897}
   fire: {fileID: 6802784952650918896}
   swordScript: {fileID: 0}
+  brain: {fileID: 0}
+  brainObject: {fileID: 0}
   player: {fileID: 0}
   playerReal: {fileID: 0}
+  firingState: 0
 --- !u!82 &6802784952650918897
 AudioSource:
   m_ObjectHideFlags: 0

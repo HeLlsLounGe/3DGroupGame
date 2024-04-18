@@ -34,7 +34,7 @@ public class LineBehavior : MonoBehaviour
         bulletLine.SetPosition(0, firingPoint);
         bulletLine.SetPosition(1, deflectPoint);
         bulletLine.SetPosition(2, enemyBody);
-        StartCoroutine(ShootBullet());
+        ShootBullet();
     }
     public void UndeflectedLineDraw()
     {
@@ -44,13 +44,18 @@ public class LineBehavior : MonoBehaviour
         bulletLine.positionCount = 2;
         bulletLine.SetPosition(0, firingPoint);
         bulletLine.SetPosition(1, playerBody);
-        StartCoroutine(ShootBullet());
+        ShootBullet();
     }
 
-    IEnumerator ShootBullet()
+     void ShootBullet()
     {
         bulletLine.enabled = true;
-        yield return new WaitForSeconds(laserDuration);
+
+        Invoke("RemoveBullet", laserDuration);
+    }
+
+    private void RemoveBullet()
+    {
         bulletLine.useWorldSpace = false;
         bulletLine.enabled = false;
         bulletLine.positionCount = 0;

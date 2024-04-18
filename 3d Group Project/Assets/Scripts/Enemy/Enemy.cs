@@ -80,7 +80,7 @@ public class Enemy : MonoBehaviour
     }
     public void Fire()
     {
-       enemyAttackScript.WindUp();
+       enemyAttackScript.PreWindUp();
     }
 
     public void AttackScriptDisable()
