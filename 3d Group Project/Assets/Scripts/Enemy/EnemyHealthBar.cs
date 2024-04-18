@@ -80,17 +80,15 @@ public class EnemyHealthBar : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         movementTracker = GetComponent<EnemyMovementTracker>();
         boxCollider = GetComponents<BoxCollider>();
-        stateMachine.enabled= false;
-        enemyAttackScript.enabled= false;
-
+        Destroy(stateMachine);
+        Destroy(enemyAttackScript);
+        Destroy(enemy);
+        Destroy(agent);
         brain.CanFireAgain();
-
-        enemy.enabled= false;
-        agent.enabled= false;
-        movementTracker.enabled = false;
+        Destroy(movementTracker);
         for (int i = 0; i < boxCollider.Length; i++)
         {
-            boxCollider[i].enabled= false;
+            Destroy(boxCollider[i]);
         }
         for (int i = 0; i < weakPointManagers.Length; i++)
         {
