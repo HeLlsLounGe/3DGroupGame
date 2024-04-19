@@ -26,6 +26,7 @@ public class WeaponScript : MonoBehaviour
     [Header("Visual Reference")]
 
     public GameObject muzzleFlash;
+    Animator animator;
     //public TextMeshProUGUI ammunitionDisplay;
     //public TextMeshProUGUI WeaponName;
     public string Weapontype;
@@ -36,6 +37,7 @@ public class WeaponScript : MonoBehaviour
     {
         bulletsLeft = magazineSize;
         readyToShoot = true;
+        animator = GetComponentInChildren<Animator>();
 
     }
     private void Update()
@@ -121,6 +123,7 @@ public class WeaponScript : MonoBehaviour
     {
         reloading = true;
         Invoke("ReloadFinished", reloadTime);
+        animator.SetTrigger("Reload");
     }
 
     private void ReloadFinished()
