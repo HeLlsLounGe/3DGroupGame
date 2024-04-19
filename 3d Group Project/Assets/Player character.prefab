@@ -297,13 +297,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deflectionState: 0
   sliceKey: 324
-  sliceDelay: 0
+  sliceDelay: 0.2
   sliceCd: 0.4
   attackRange: 1.4
   leniancy: 0.5
   leniancyTimer: 0
   recharge: 0.6
-  damage: 10
+  damage: 20
   criticalDamage: 120
   maxDeflects: 8
   animator: {fileID: 0}
@@ -757,7 +757,7 @@ MonoBehaviour:
   playerCam: {fileID: 8815322699377439081}
   maxSpeed: 50
   dashForce: 20
-  dashUpwardForce: 7
+  dashUpwardForce: 5
   dashDuration: 0.4
   isDashing: 0
   dashCd: 3
