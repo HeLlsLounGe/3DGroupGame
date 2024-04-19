@@ -22780,7 +22780,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!1 &1010377476
 GameObject:
@@ -23265,6 +23265,7 @@ GameObject:
   - component: {fileID: 1142067362}
   - component: {fileID: 1142067364}
   - component: {fileID: 1142067363}
+  - component: {fileID: 1142067365}
   m_Layer: 0
   m_Name: Cube.003 (2)
   m_TagString: Untagged
@@ -23336,6 +23337,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142067361}
+  m_Mesh: {fileID: -8678823145569952518, guid: 8f4f664eaba9ca844ade114ebcf8110f, type: 3}
+--- !u!64 &1142067365
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142067361}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -8678823145569952518, guid: 8f4f664eaba9ca844ade114ebcf8110f, type: 3}
 --- !u!43 &1221948406
 Mesh:
