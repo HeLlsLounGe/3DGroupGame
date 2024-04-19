@@ -95,7 +95,7 @@ ModelImporter:
       takeName: rig|rigAction
       internalID: 5342692815085989262
       firstFrame: 0
-      lastFrame: 16
+      lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -123,8 +123,8 @@ ModelImporter:
       name: Ready Weapon
       takeName: rig|rigAction
       internalID: 2350454378177017743
-      firstFrame: 16
-      lastFrame: 43
+      firstFrame: 20
+      lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -152,8 +152,8 @@ ModelImporter:
       name: Walk
       takeName: rig|rigAction
       internalID: 5813647269309148441
-      firstFrame: 43
-      lastFrame: 79
+      firstFrame: 40
+      lastFrame: 80
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -210,7 +210,7 @@ ModelImporter:
       name: die
       takeName: rig|rigAction
       internalID: -4286712430264292628
-      firstFrame: 81
+      firstFrame: 80
       lastFrame: 116
       wrapMode: 0
       orientationOffsetY: 0
