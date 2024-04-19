@@ -20,6 +20,12 @@ public class EnemyAttackScript : MonoBehaviour
 
     LineBehavior lineBehavior;
 
+    // MultiShot values
+    [SerializeField] int additionalShots;
+    int aSCounter;
+    [SerializeField]
+    float fireRate = 0.07f;
+
 
    void Awake()
     { 
@@ -32,6 +38,7 @@ public class EnemyAttackScript : MonoBehaviour
         brain = brainObject.GetComponent<CollectiveEnemyBrain>();
         lineBehavior = GetComponentInChildren<LineBehavior>();
         lineBehavior.enabled = false;
+        aSCounter = additionalShots;
     }
 
     void Update()
@@ -85,6 +92,7 @@ public class EnemyAttackScript : MonoBehaviour
        counterWindowTimer = counterWindow;
        currentWarning = warnings;
        bulletState = true;
+       aSCounter = additionalShots;
     } 
     public void Countered()
     {
@@ -94,13 +102,19 @@ public class EnemyAttackScript : MonoBehaviour
         firingState = false;
         lineBehavior.DeflectedLineDraw();
         brain.CanFireAgain();
+
+        if (aSCounter > 0)
+        { 
+            aSCounter--;
+            Invoke("Uncountered", fireRate);
+        }
     }
 
     void Uncountered()
     {
         if (swordScript.leniancyTimer <= 0 && bulletState)
         {
-            bulletState = false;
+            
             playerReal.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);
             lineBehavior.enabled = true;
             firingState = false;
@@ -111,7 +125,12 @@ public class EnemyAttackScript : MonoBehaviour
         {
            Countered();
         }
-        bulletState = false;
+        if (aSCounter > 0)
+        {
+            aSCounter--;
+            Invoke("Uncountered", fireRate);
+        }
+        else { bulletState = false; }
     }
 
     void Retry()

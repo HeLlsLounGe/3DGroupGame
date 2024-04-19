@@ -84,7 +84,8 @@ public class EnemyHealthBar : MonoBehaviour
         Destroy(enemyAttackScript);
         Destroy(enemy);
         Destroy(agent);
-        brain.CanFireAgain();
+        if (brain.canFire == false)
+        { brain.CanFireAgain(); }
         Destroy(movementTracker);
         for (int i = 0; i < boxCollider.Length; i++)
         {
