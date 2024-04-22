@@ -111,6 +111,7 @@ public class WeaponScript : MonoBehaviour
 
         if (bulletsLeft == 0)
         { Reload(); }
+        animator.SetTrigger("Recoil");
     }
 
     private void ResetShot()

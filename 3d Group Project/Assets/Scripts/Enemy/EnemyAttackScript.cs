@@ -16,7 +16,6 @@ public class EnemyAttackScript : MonoBehaviour
     public GameObject player;
     public GameObject playerReal;
     public bool bulletState = false;
-    public bool firingState = false;
 
     LineBehavior lineBehavior;
 
@@ -71,7 +70,6 @@ public class EnemyAttackScript : MonoBehaviour
   public void WindUp()
     {
             brain.HasFired();
-            firingState = true;
             if (currentWarning > 0)
             { Invoke(nameof(Sound), 0f); }
 
@@ -99,38 +97,44 @@ public class EnemyAttackScript : MonoBehaviour
         lineBehavior.enabled = true;
         bulletState = false;
         GetComponent<EnemyHealthBar>().TakeDamage(enemyDamage);
-        firingState = false;
         lineBehavior.DeflectedLineDraw();
         brain.CanFireAgain();
 
         if (aSCounter > 0)
         { 
             aSCounter--;
-            Invoke("Uncountered", fireRate);
+            Burst();
         }
     }
 
     void Uncountered()
     {
         if (swordScript.leniancyTimer <= 0 && bulletState)
-        {
-            
+        {      
             playerReal.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);
+
             lineBehavior.enabled = true;
-            firingState = false;
             lineBehavior.UndeflectedLineDraw();
+
             brain.CanFireAgain();
         }
         else if (swordScript.leniancyTimer > 0)
         {
            Countered();
         }
+
+
         if (aSCounter > 0)
         {
             aSCounter--;
-            Invoke("Uncountered", fireRate);
+            Burst();
         }
         else { bulletState = false; }
+    }
+
+    void Burst()
+    {
+        Invoke("Uncountered", fireRate);
     }
 
     void Retry()
