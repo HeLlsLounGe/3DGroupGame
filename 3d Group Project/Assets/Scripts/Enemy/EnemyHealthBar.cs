@@ -10,7 +10,7 @@ public class EnemyHealthBar : MonoBehaviour
     [SerializeField] private int switchPoint;
     private int MaxHP, switchTimer;
     //Slider healthSlider;
-    public bool isDead = false;
+    public bool isDead = false, projectileEnemy = false;
     public int randomPoint;
     GameObject enemyBrain;
     CollectiveEnemyBrain brain;
@@ -18,6 +18,8 @@ public class EnemyHealthBar : MonoBehaviour
     Animator animator;
     StateMachine stateMachine;
     Enemy enemy;
+    ProjectileStateMachine proStateMachine;
+    ProjectileEnemy proEnemy;
     EnemyAttackScript enemyAttackScript;
     EnemyMovementTracker movementTracker;
     WeakPointManager[] weakPointManagers;
@@ -71,7 +73,11 @@ public class EnemyHealthBar : MonoBehaviour
     private void EnemyDead()
     {
         Debug.Log("Dead");
-
+        if (projectileEnemy == true)
+        { 
+            ProjectileEnemyDead();
+            return;
+        }
         brain.CanFireAgain();
 
         stateMachine = GetComponent<StateMachine>();
@@ -99,6 +105,28 @@ public class EnemyHealthBar : MonoBehaviour
         
         
     }
+    private void ProjectileEnemyDead()
+    {
+        proStateMachine = GetComponent<ProjectileStateMachine>();
+        proEnemy = GetComponent<ProjectileEnemy>();
+        agent = GetComponent<NavMeshAgent>();
+        movementTracker = GetComponent<EnemyMovementTracker>();
+        boxCollider = GetComponents<BoxCollider>();
+        Destroy(proStateMachine);
+        Destroy(proEnemy);
+        Destroy(agent);
+        Destroy(movementTracker);
+        for (int i = 0; i < boxCollider.Length; i++)
+        {
+            Destroy(boxCollider[i]);
+        }
+        for (int i = 0; i < weakPointManagers.Length; i++)
+        {
+            weakPointManagers[i].KillFunction();
+        }
+        animator.SetTrigger("Fall");
+    }
 
-    
+
+
 }
