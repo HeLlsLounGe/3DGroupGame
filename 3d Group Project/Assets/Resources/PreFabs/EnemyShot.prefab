@@ -657,7 +657,7 @@ MonoBehaviour:
     m_Bits: 1024
   bounciness: 0
   useGravity: 0
-  explosionDamage: 50
+  explosionDamage: 30
   explosionRange: 0.1
   maxCollisions: 1
   maxLifeTime: 0.1

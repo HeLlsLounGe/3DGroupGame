@@ -47,7 +47,11 @@ public class EnemyBullet : MonoBehaviour
     {
         collisions++;
         if (collision.gameObject.tag == "Player")
-        { collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(explosionDamage); }
+        { 
+            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(explosionDamage);
+            Destroy(gameObject);
+
+        }
 
         if (collision.collider.CompareTag("Player") && explodeOnTouch) Explode();
 
