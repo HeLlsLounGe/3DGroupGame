@@ -11,6 +11,8 @@ public class SwordScript : MonoBehaviour
     public int damage, criticalDamage, maxDeflects;
     int deflectsLeft;
     private float sliceCdTimer, rechargeTimer;
+    [SerializeField] AudioSource cutSound;
+    [SerializeField] AudioSource deflectSound;
     public Animator animator;
 
     public Transform attackPoint;
@@ -82,10 +84,12 @@ public class SwordScript : MonoBehaviour
             if (dashScript.isDashing == true)
             { 
                 enemy.GetComponent<EnemyHealthBar>().TakeDamage(criticalDamage);
+                cutSound.Play();
             }
             else
             {
                 enemy.GetComponent<EnemyHealthBar>().TakeDamage(damage);
+                cutSound.Play();
             }
         } 
     }
@@ -102,6 +106,7 @@ public class SwordScript : MonoBehaviour
         if (target.GetComponent<EnemyAttackScript>().bulletState == false)
         { return; }
         target.GetComponent<EnemyAttackScript>().Countered();
+        deflectSound.Play();
     }
 
     void DownSword()

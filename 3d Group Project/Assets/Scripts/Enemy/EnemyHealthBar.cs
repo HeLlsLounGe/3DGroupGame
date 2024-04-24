@@ -8,6 +8,7 @@ public class EnemyHealthBar : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private int hitpoints = 50;
     [SerializeField] private int switchPoint;
+    [SerializeField] AudioSource hurtSound;
     private int MaxHP, switchTimer;
     //Slider healthSlider;
     public bool isDead = false, projectileEnemy = false;
@@ -51,7 +52,7 @@ public class EnemyHealthBar : MonoBehaviour
         { 
             randomPoint = Random.Range(0, 6);
             switchTimer = switchPoint;
-
+            hurtSound.Play();
             for (int i = 0; i < weakPointManagers.Length; i++)
             {
                 weakPointManagers[i].WeakPointAssign();
