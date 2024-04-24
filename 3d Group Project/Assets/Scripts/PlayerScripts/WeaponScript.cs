@@ -25,6 +25,10 @@ public class WeaponScript : MonoBehaviour
 
     [Header("Visual Reference")]
 
+    [SerializeField] AudioSource shotSound;
+    [SerializeField] AudioSource secondSound;
+    [SerializeField] bool isShotgun;
+
     public GameObject muzzleFlash;
     Animator animator;
     //public TextMeshProUGUI ammunitionDisplay;
@@ -38,6 +42,10 @@ public class WeaponScript : MonoBehaviour
         bulletsLeft = magazineSize;
         readyToShoot = true;
         animator = GetComponentInChildren<Animator>();
+        if (allowButtonHold == true )
+        {
+            shotSound.loop = true;
+        }
 
     }
     private void Update()
@@ -65,6 +73,14 @@ public class WeaponScript : MonoBehaviour
             bulletsShot = 0;
 
             Shoot();
+        }
+        if (allowButtonHold ==  true && Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            shotSound.Play();
+        }
+        else if (allowButtonHold == true && Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            shotSound.Stop();
         }
 
     }
@@ -112,6 +128,11 @@ public class WeaponScript : MonoBehaviour
         if (bulletsLeft == 0)
         { Reload(); }
         animator.SetTrigger("Recoil");
+        if (allowButtonHold == false)
+        { shotSound.Play(); }
+        if (isShotgun)
+        { secondSound.PlayDelayed(0.1f); }
+
     }
 
     private void ResetShot()

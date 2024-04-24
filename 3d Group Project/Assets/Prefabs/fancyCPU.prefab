@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 779393186499180089}
+  - component: {fileID: 12643867793125315}
   m_Layer: 0
   m_Name: fancyCPU
   m_TagString: Untagged
@@ -33,6 +34,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &12643867793125315
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779393186499180094}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.2012415, y: 7.8418946, z: 1.0613868}
+  m_Center: {x: -0.05930815, y: 2.8894262, z: 0.20388272}
 --- !u!1 &2369241733431081902
 GameObject:
   m_ObjectHideFlags: 0

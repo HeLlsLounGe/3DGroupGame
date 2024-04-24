@@ -99,6 +99,7 @@ public class EnemyAttackScript : MonoBehaviour
         GetComponent<EnemyHealthBar>().TakeDamage(enemyDamage);
         lineBehavior.DeflectedLineDraw();
         brain.CanFireAgain();
+        fire.Play();
 
         if (aSCounter > 0)
         { 
@@ -117,6 +118,7 @@ public class EnemyAttackScript : MonoBehaviour
             lineBehavior.UndeflectedLineDraw();
 
             brain.CanFireAgain();
+            fire.Play();
         }
         else if (swordScript.leniancyTimer > 0)
         {
