@@ -1511,6 +1511,7 @@ MonoBehaviour:
   attackRange: 100
   attackRate: 1
   batRange: 1
+  batDelay: 0.4
   damage: 30
   playerlayer:
     serializedVersion: 2
@@ -1579,6 +1580,7 @@ MonoBehaviour:
   hurtSound: {fileID: 3585669958929727844}
   isDead: 0
   projectileEnemy: 0
+  meleeEnemy: 1
   randomPoint: 0
 --- !u!82 &8046387768541140519
 AudioSource:
