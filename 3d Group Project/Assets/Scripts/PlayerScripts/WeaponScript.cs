@@ -26,6 +26,8 @@ public class WeaponScript : MonoBehaviour
     [Header("Visual Reference")]
 
     [SerializeField] AudioSource shotSound;
+    [SerializeField] AudioSource secondSound;
+    [SerializeField] bool isShotgun;
 
     public GameObject muzzleFlash;
     Animator animator;
@@ -128,6 +130,8 @@ public class WeaponScript : MonoBehaviour
         animator.SetTrigger("Recoil");
         if (allowButtonHold == false)
         { shotSound.Play(); }
+        if (isShotgun)
+        { secondSound.PlayDelayed(0.1f); }
 
     }
 
