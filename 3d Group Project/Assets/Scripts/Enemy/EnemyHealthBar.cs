@@ -11,7 +11,7 @@ public class EnemyHealthBar : MonoBehaviour
     [SerializeField] AudioSource hurtSound;
     private int MaxHP, switchTimer;
     //Slider healthSlider;
-    public bool isDead = false, projectileEnemy = false;
+    public bool isDead = false, projectileEnemy = false, meleeEnemy = false;
     public int randomPoint;
     GameObject enemyBrain;
     CollectiveEnemyBrain brain;
@@ -23,6 +23,7 @@ public class EnemyHealthBar : MonoBehaviour
     ProjectileEnemy proEnemy;
     EnemyAttackScript enemyAttackScript;
     EnemyMovementTracker movementTracker;
+    MeleeEnemyAI meleeAI;
     WeakPointManager[] weakPointManagers;
     BoxCollider[] boxCollider;
     //public Canvas healthBar;
@@ -79,6 +80,11 @@ public class EnemyHealthBar : MonoBehaviour
             ProjectileEnemyDead();
             return;
         }
+        if (meleeEnemy == true)
+        {
+            MeleeEnemyDead();
+            return;
+        }
         brain.CanFireAgain();
 
         stateMachine = GetComponent<StateMachine>();
@@ -127,7 +133,24 @@ public class EnemyHealthBar : MonoBehaviour
         }
         animator.SetTrigger("Fall");
     }
-
-
+    private void MeleeEnemyDead()
+    {
+        meleeAI = GetComponent<MeleeEnemyAI>();
+        agent = GetComponent<NavMeshAgent>();
+        movementTracker = GetComponent<EnemyMovementTracker>();
+        boxCollider = GetComponents<BoxCollider>();
+        Destroy(meleeAI);
+        Destroy(agent);
+        Destroy(movementTracker);
+        for (int i = 0; i < boxCollider.Length; i++)
+        {
+            Destroy(boxCollider[i]);
+        }
+        for (int i = 0; i < weakPointManagers.Length; i++)
+        {
+            weakPointManagers[i].KillFunction();
+        }
+        animator.SetTrigger("Fall");
+    }
 
 }
