@@ -35,7 +35,6 @@ public class MeleeEnemyAI : MonoBehaviour
         if ((transform.position - lookPoint).sqrMagnitude < attackRange && attackTimer <= 0)
         {
             Invoke("Swing", batDelay);
-
             attackTimer = attackRate;
         }
     }
