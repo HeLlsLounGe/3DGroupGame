@@ -20,7 +20,7 @@ public class WeakPointManager : MonoBehaviour
         collider2.enabled = false;
         SR.enabled = false;
         healthScript = GetComponentInParent<EnemyHealthBar>();
-        WeakPointAssign();
+        Invoke("WeakPointAssign", 0.1f);
        
     }
     public void WeakPointAssign()
