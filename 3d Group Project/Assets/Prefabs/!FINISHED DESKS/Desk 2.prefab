@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5706502078388208671}
   - component: {fileID: 3948743141880164993}
   - component: {fileID: 4884942268703354462}
+  - component: {fileID: 3574959349373869908}
   m_Layer: 0
   m_Name: Desk 2
   m_TagString: Untagged
@@ -25,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8594817542879038197}
-  m_LocalRotation: {x: -0.7069834, y: -0, z: -0, w: 0.7072302}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -43.419994, y: -8.397919, z: 61.259556}
-  m_LocalScale: {x: 105.18383, y: 105.18382, z: 105.18382}
+  m_LocalScale: {x: 20, y: 20, z: 20}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3810570982357034208}
@@ -39,7 +40,7 @@ Transform:
   - {fileID: 2532752105888048930}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &3948743141880164993
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -90,6 +91,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3574959349373869908
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8594817542879038197}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1887945, y: 0.07563763, z: 0.0846643}
+  m_Center: {x: -0.0018690638, y: -0.0013886375, z: -0.040298782}
 --- !u!1001 &1247914550425354302
 PrefabInstance:
   m_ObjectHideFlags: 0
