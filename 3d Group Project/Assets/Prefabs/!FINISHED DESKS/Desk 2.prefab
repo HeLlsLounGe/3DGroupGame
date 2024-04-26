@@ -471,6 +471,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: normCPU1
       objectReference: {fileID: 0}
+    - target: {fileID: 2347075646519644724, guid: 61ea7c14a1146d74e9762f5972e769c4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 2347075646519644724, guid: 61ea7c14a1146d74e9762f5972e769c4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.22
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61ea7c14a1146d74e9762f5972e769c4, type: 3}
 --- !u!4 &5526188098018642321 stripped
