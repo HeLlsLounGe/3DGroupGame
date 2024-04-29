@@ -579,7 +579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   path: {fileID: 8765573862286839121}
-  sightDistance: 20
+  sightDistance: 40
   fieldOfView: 180
   eyeHeight: 0
   gunBarrel: {fileID: 0}
@@ -603,6 +603,7 @@ MonoBehaviour:
   hurtSound: {fileID: 2055460106524475484}
   isDead: 0
   projectileEnemy: 0
+  meleeEnemy: 0
   randomPoint: 0
 --- !u!114 &1211337031589001362
 MonoBehaviour:
