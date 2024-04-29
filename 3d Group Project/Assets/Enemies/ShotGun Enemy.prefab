@@ -401,12 +401,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   path: {fileID: 8538523001371286794}
-  sightDistance: 20
-  fieldOfView: 180
+  sightDistance: 40
+  fieldOfView: 360
   eyeHeight: 0
   gunBarrel: {fileID: 4718839825543000591}
-  fireRateUpper: 2.21
-  fireRateLower: 7.35
+  fireRateUpper: 2
+  fireRateLower: 2
   fireRate: 3
 --- !u!114 &4380946003727240207
 MonoBehaviour:
@@ -437,6 +437,7 @@ MonoBehaviour:
   hurtSound: {fileID: 0}
   isDead: 0
   projectileEnemy: 1
+  meleeEnemy: 0
   randomPoint: 0
 --- !u!195 &4718839825221406208
 NavMeshAgent:

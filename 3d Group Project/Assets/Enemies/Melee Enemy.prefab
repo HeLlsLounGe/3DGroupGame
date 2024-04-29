@@ -1508,7 +1508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battingPoint: {fileID: 6065673496190935797}
-  attackRange: 100
+  attackRange: 1
   attackRate: 1
   batRange: 1
   batDelay: 0.4
