@@ -8,12 +8,20 @@ public class WinFunction : MonoBehaviour
     public int Enemies;
     void Start()
     {
-        Debug.Log("Spawners " + Spawners);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void WinCheck()
+    {
+        if(Spawners == 0 && Enemies == 0)
+        {
+            Debug.Log("You're are winner");
+        }
     }
 }

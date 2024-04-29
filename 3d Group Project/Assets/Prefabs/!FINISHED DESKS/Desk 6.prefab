@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7251106839391443343}
   - component: {fileID: 7251106839391443336}
   - component: {fileID: 676327465472846354}
+  - component: {fileID: -6281737741896751855}
   m_Layer: 0
   m_Name: Desk 6
   m_TagString: Untagged
@@ -99,6 +100,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1887945, y: 0.07563762, z: 0.08466429}
   m_Center: {x: -0.0018690638, y: -0.0013886373, z: -0.04029878}
+--- !u!208 &-6281737741896751855
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7251106839391443338}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.094000004, y: 0.038000003, z: 0.042000003}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.002, y: -0.001, z: -0.040000003}
+  m_TimeToStationary: 0.5
 --- !u!1001 &3601326679337179597
 PrefabInstance:
   m_ObjectHideFlags: 0

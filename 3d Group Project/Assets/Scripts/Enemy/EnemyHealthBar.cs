@@ -19,6 +19,7 @@ public class EnemyHealthBar : MonoBehaviour
     Animator animator;
     StateMachine stateMachine;
     Enemy enemy;
+    WinFunction winFunction;
     ProjectileStateMachine proStateMachine;
     ProjectileEnemy proEnemy;
     EnemyAttackScript enemyAttackScript;
@@ -32,6 +33,8 @@ public class EnemyHealthBar : MonoBehaviour
     {
         enemyBrain = GameObject.FindWithTag("EnemyBrain");
         brain = enemyBrain.GetComponent<CollectiveEnemyBrain>();
+        winFunction = enemyBrain.GetComponent<WinFunction>();
+        winFunction.Enemies++;
         weakPointManagers = GetComponentsInChildren<WeakPointManager>();
         //healthSlider = GetComponentInChildren<Slider>();
         MaxHP = hitpoints;
@@ -42,7 +45,7 @@ public class EnemyHealthBar : MonoBehaviour
         //healthBar.enabled = false;
 
         randomPoint = Random.Range(0, 6);
-   
+            
     }
 
     public void TakeDamage(int dmg)
@@ -75,6 +78,8 @@ public class EnemyHealthBar : MonoBehaviour
     private void EnemyDead()
     {
         Debug.Log("Dead");
+        winFunction.Enemies--;
+        winFunction.WinCheck();
         if (projectileEnemy == true)
         { 
             ProjectileEnemyDead();

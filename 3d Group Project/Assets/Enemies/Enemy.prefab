@@ -1062,7 +1062,7 @@ MonoBehaviour:
   path: {fileID: 3963804013619338813}
   sightDistance: 20
   fieldOfView: 180
-  eyeHeight: 0
+  eyeHeight: 1
   gunBarrel: {fileID: 0}
   fireRateUpper: 5
   fireRateLower: 2
@@ -1084,6 +1084,7 @@ MonoBehaviour:
   hurtSound: {fileID: 1629224114}
   isDead: 0
   projectileEnemy: 0
+  meleeEnemy: 0
   randomPoint: 0
 --- !u!114 &6802784952650918910
 MonoBehaviour:
