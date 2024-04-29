@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3620334599726576463}
   - component: {fileID: 5131868031363739536}
   - component: {fileID: 6345662877980236396}
+  - component: {fileID: -1821243305699847563}
   m_Layer: 0
   m_Name: Desk 12
   m_TagString: Untagged
@@ -104,6 +105,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.18879452, y: 0.07563767, z: 0.08466438}
   m_Center: {x: -0.0018700283, y: -0.0013886382, z: -0.040302612}
+--- !u!208 &-1821243305699847563
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8337340284704459579}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.094000004, y: 0.038000003, z: 0.042000003}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.002, y: -0.001, z: -0.040000003}
+  m_TimeToStationary: 0.5
 --- !u!1001 &2267080755506766533
 PrefabInstance:
   m_ObjectHideFlags: 0
