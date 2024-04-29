@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8219032362176475942}
   - component: {fileID: 2457192343687515098}
   - component: {fileID: 78711316799497856}
+  - component: {fileID: 8316564597418014331}
   m_Layer: 0
   m_Name: Chair 2
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2054149968456825854}
   m_LocalRotation: {x: -0.061628465, y: 0.70441604, z: 0.70441604, w: 0.061628465}
   m_LocalPosition: {x: -31.8, y: 1.62, z: -56.3}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalScale: {x: 17, y: 17, z: 17}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,3 +99,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5053925668127403250, guid: 1b2a39f979d546146b94ae6c81a7ad2d, type: 3}
+--- !u!65 &8316564597418014331
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054149968456825854}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0868732, y: 0.0786227, z: 0.08415828}
+  m_Center: {x: 0.02289671, y: -0.0000000035056178, z: 0.027509725}

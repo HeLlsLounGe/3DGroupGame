@@ -258,6 +258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6701995930238236281}
+  - component: {fileID: 1378991724808913157}
   m_Layer: 0
   m_Name: BinderStack
   m_TagString: Untagged
@@ -284,6 +285,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1378991724808913157
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6701995930238236280}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.283798, y: 2.6629949, z: 5.047494}
+  m_Center: {x: -0.10276153, y: -0.41731888, z: 0.02794325}
 --- !u!1 &8050994330449871056
 GameObject:
   m_ObjectHideFlags: 0
