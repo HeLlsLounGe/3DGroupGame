@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18264376, g: 0.22558875, b: 0.29108387, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -502,7 +502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8815322699251828360, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.94
+      value: 3.46
       objectReference: {fileID: 0}
     - target: {fileID: 8815322699251828360, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
       propertyPath: m_LocalPosition.z
@@ -650,6 +650,10 @@ PrefabInstance:
     - target: {fileID: 5458568119470369156, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
@@ -1140,7 +1144,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35434
+  m_Name: pb_Mesh23312
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1693,6 +1697,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
       value: Spot Light (13)
@@ -1878,6 +1886,10 @@ PrefabInstance:
     - target: {fileID: 5458568119470369156, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
@@ -2070,106 +2082,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
       value: Spot Light (26)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f99579ab32efab4479a23559de89d19a, type: 3}
---- !u!1 &662576068
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 662576070}
-  - component: {fileID: 662576069}
-  m_Layer: 0
-  m_Name: Directional Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &662576069
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 662576068}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 1
-  m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.8
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &662576070
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 662576068}
-  m_LocalRotation: {x: 0.1750694, y: -0.25453246, z: 0.0469097, w: 0.94992816}
-  m_LocalPosition: {x: -16.084072, y: 8.395862, z: -39.978634}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 20.885, y: -30, z: 0}
 --- !u!4 &666573545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7901416063401094219, guid: 46337fd4a53b16346853ef5b4da95930, type: 3}
@@ -2501,7 +2423,7 @@ Transform:
   - {fileID: 90859184}
   - {fileID: 581972644}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &759825309
 PrefabInstance:
@@ -2786,6 +2708,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
       value: Spot Light (12)
@@ -2873,6 +2799,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
       value: Spot Light (10)
@@ -2929,6 +2859,10 @@ PrefabInstance:
     - target: {fileID: 5458568119470369156, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
@@ -3453,6 +3387,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
       value: Spot Light (22)
@@ -3509,6 +3447,10 @@ PrefabInstance:
     - target: {fileID: 5458568119470369156, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
@@ -3664,6 +3606,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
       value: Spot Light (15)
@@ -3725,6 +3671,10 @@ PrefabInstance:
     - target: {fileID: 5458568119470369156, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
@@ -3793,6 +3743,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
       value: Spot Light (24)
@@ -3850,6 +3804,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
       value: Spot Light (4)
@@ -3906,6 +3864,10 @@ PrefabInstance:
     - target: {fileID: 5458568119470369156, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
@@ -4128,7 +4090,7 @@ GameObject:
   - component: {fileID: 1316816910}
   - component: {fileID: 1316816909}
   - component: {fileID: 1316816908}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46668,6 +46630,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
       value: Spot Light (23)
@@ -46793,6 +46759,10 @@ PrefabInstance:
     - target: {fileID: 5458568119470369156, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
@@ -46925,6 +46895,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
       value: Spot Light (25)
@@ -46982,6 +46956,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
       value: Spot Light (7)
@@ -47038,6 +47016,10 @@ PrefabInstance:
     - target: {fileID: 5458568119470369156, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
@@ -47289,6 +47271,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
       value: Spot Light (17)
@@ -47459,6 +47445,10 @@ PrefabInstance:
     - target: {fileID: 5458568119470369156, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
@@ -47708,6 +47698,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
       value: Spot Light (9)
@@ -47771,6 +47765,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9bd74522ffaf0749aa06cba8205a7ca, type: 3}
+--- !u!1 &1687493113 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4436728986500061587, guid: 40c99ef9622e4034891e0d9171ba28dd, type: 3}
+  m_PrefabInstance: {fileID: 1318920463}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &1687493116
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687493113}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.020104507
+  m_Center: {x: 0.0000000018626451, y: -0.000000014901161, z: 0.000036258254}
 --- !u!4 &1690078246 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 140287665621696494, guid: 850bfba006ca2de45aed7638c699a862, type: 3}
@@ -47888,6 +47900,10 @@ PrefabInstance:
     - target: {fileID: 5458568119470369156, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
@@ -48013,6 +48029,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
       value: Spot Light (14)
@@ -48035,7 +48055,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh35558
+  m_Name: pb_Mesh23496
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -48325,6 +48345,10 @@ PrefabInstance:
     - target: {fileID: 5458568119470369156, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
@@ -49152,6 +49176,10 @@ PrefabInstance:
     - target: {fileID: 5458568119470369156, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5458568119470369157, guid: f99579ab32efab4479a23559de89d19a, type: 3}
+      propertyPath: m_Lightmapping
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5458568119470369158, guid: f99579ab32efab4479a23559de89d19a, type: 3}
       propertyPath: m_Name
