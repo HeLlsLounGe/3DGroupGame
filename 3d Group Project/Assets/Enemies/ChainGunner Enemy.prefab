@@ -9989,7 +9989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   path: {fileID: 745205036937686540}
-  sightDistance: 80
+  sightDistance: 30
   fieldOfView: 180
   eyeHeight: 0
   gunBarrel: {fileID: 0}
@@ -10053,7 +10053,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6aaf3cc8944c0c6439099ed981f6c271, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.77
   m_Pitch: 1
   Loop: 0
   Mute: 0
