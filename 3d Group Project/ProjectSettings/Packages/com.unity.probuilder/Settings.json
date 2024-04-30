@@ -196,7 +196,19 @@
             {
                 "type": "UnityEngine.ProBuilder.SelectMode, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "editor.selectMode",
+<<<<<<< HEAD
+                "value": "{\"m_Value\":1}"
+=======
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+                "value": "{\"m_Value\":1}"
+=======
                 "value": "{\"m_Value\":8}"
+>>>>>>> d20fb57c86ee88f48753998bdb040fb0d245703a
+=======
+                "value": "{\"m_Value\":1}"
+>>>>>>> Stashed changes
+>>>>>>> c25d9eef224503817332fb6d6a0cea4824234eff
             },
             {
                 "type": "UnityEngine.ProBuilder.SelectMode, Unity.ProBuilder, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
