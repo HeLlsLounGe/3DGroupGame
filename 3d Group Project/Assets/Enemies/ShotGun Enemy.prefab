@@ -3214,7 +3214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   path: {fileID: 8538523001371286794}
-  sightDistance: 40
+  sightDistance: 30
   fieldOfView: 360
   eyeHeight: 0
   gunBarrel: {fileID: 4718839825543000591}
