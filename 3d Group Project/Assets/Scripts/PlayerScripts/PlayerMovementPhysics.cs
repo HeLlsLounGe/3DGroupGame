@@ -55,12 +55,15 @@ public class PlayerMovementPhysics : MonoBehaviour
     }
     void UpdateLook()
     {
-        look.x += Input.GetAxis("Mouse X") * mouseSensitivity;
-        look.y += Input.GetAxis("Mouse Y") * mouseSensitivity;
+        if (Cursor.lockState == CursorLockMode.Locked)
+        {
+            look.x += Input.GetAxis("Mouse X") * mouseSensitivity;
+            look.y += Input.GetAxis("Mouse Y") * mouseSensitivity;
 
-        look.y = Mathf.Clamp(look.y, -89f, 89f);
-        cameraTransform.localRotation = Quaternion.Euler(-look.y, 0, 0);
-        transform.localRotation = Quaternion.Euler(0, look.x, 0);
+            look.y = Mathf.Clamp(look.y, -89f, 89f);
+            cameraTransform.localRotation = Quaternion.Euler(-look.y, 0, 0);
+            transform.localRotation = Quaternion.Euler(0, look.x, 0);
+        }
     }
 
     void UpdateMovement()
