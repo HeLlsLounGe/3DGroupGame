@@ -3218,8 +3218,8 @@ MonoBehaviour:
   fieldOfView: 360
   eyeHeight: 0
   gunBarrel: {fileID: 4718839825543000591}
-  fireRateUpper: 2
-  fireRateLower: 2
+  fireRateUpper: 3
+  fireRateLower: 3
   fireRate: 3
 --- !u!114 &4380946003727240207
 MonoBehaviour:
@@ -3247,6 +3247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitpoints: 120
   switchPoint: 40
+  healAmount: 30
   hurtSound: {fileID: 0}
   isDead: 0
   projectileEnemy: 1

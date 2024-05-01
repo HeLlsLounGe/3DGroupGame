@@ -7,7 +7,7 @@ public class EnemyHealthBar : MonoBehaviour
 {
     [Header("Attributes")]
     [SerializeField] private int hitpoints = 50;
-    [SerializeField] private int switchPoint;
+    [SerializeField] private int switchPoint, healAmount;
     [SerializeField] AudioSource hurtSound;
     private int MaxHP, switchTimer;
     //Slider healthSlider;
@@ -81,7 +81,7 @@ public class EnemyHealthBar : MonoBehaviour
     }
     private void EnemyDead()
     {
-        playerhealth.RestoreHealth(1);
+        playerhealth.RestoreHealth(healAmount);
         Debug.Log("Dead");
         winFunction.Enemies--;
         winFunction.WinCheck();

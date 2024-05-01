@@ -57,7 +57,7 @@ public class ProjectileAttackState : ProjectileBaseState
         Transform gunbarrel = enemy.gunBarrel;
         GameObject bullet = GameObject.Instantiate(Resources.Load("PreFabs/EnemyShot") as GameObject, gunbarrel.position, enemy.transform.rotation);
         Vector3 shootDirection = (enemy.Player.transform.position - gunbarrel.transform.position).normalized;
-        bullet.GetComponent<Rigidbody>().velocity = shootDirection * 100;
+        bullet.GetComponent<Rigidbody>().velocity = shootDirection * 50;
         shotTimer = 0;
 
     }

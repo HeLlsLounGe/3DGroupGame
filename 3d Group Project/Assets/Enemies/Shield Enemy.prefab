@@ -600,6 +600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitpoints: 80
   switchPoint: 40
+  healAmount: 15
   hurtSound: {fileID: 2055460106524475484}
   isDead: 0
   projectileEnemy: 0
