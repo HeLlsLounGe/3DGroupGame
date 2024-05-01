@@ -9136,6 +9136,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 91fd7f776b48bc94e81f8cabc6a1552e, type: 2}
+    - target: {fileID: 4204928799064636991, guid: 47a1fd943a8c98c43a6e08fa94847fe2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 91fd7f776b48bc94e81f8cabc6a1552e, type: 2}
+    - target: {fileID: 7990174344196246241, guid: 47a1fd943a8c98c43a6e08fa94847fe2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 91fd7f776b48bc94e81f8cabc6a1552e, type: 2}
     - target: {fileID: 8105687207635404123, guid: 47a1fd943a8c98c43a6e08fa94847fe2, type: 3}
       propertyPath: m_Name
       value: Papers
@@ -9150,7 +9158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8973900357532770324, guid: 47a1fd943a8c98c43a6e08fa94847fe2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 19.47
+      value: 19.466
       objectReference: {fileID: 0}
     - target: {fileID: 8973900357532770324, guid: 47a1fd943a8c98c43a6e08fa94847fe2, type: 3}
       propertyPath: m_LocalPosition.z
