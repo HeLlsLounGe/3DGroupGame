@@ -3248,7 +3248,7 @@ MonoBehaviour:
   hitpoints: 120
   switchPoint: 40
   healAmount: 30
-  hurtSound: {fileID: 0}
+  hurtSound: {fileID: 388458688}
   isDead: 0
   projectileEnemy: 1
   meleeEnemy: 0
