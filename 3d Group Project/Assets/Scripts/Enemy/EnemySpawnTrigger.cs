@@ -5,7 +5,10 @@ using UnityEngine;
 public class EnemySpawnTrigger : MonoBehaviour
 {
     public SpawnEnemy[] spawnEnemies;
+    public bool multipleWaves;
+    public float waveTimer;
     bool enemiesSpawned = false;
+    
     WinFunction winFunction;
     GameObject brain;
 
@@ -28,6 +31,18 @@ public class EnemySpawnTrigger : MonoBehaviour
             enemiesSpawned=true;
 
             winFunction.Spawners--;
+
+            if (multipleWaves == true)
+            { Invoke("NextWave", waveTimer); }
         }
+    }
+
+    void NextWave()
+    {
+        for (int i = 0; i < spawnEnemies.Length; i++)
+        {
+            spawnEnemies[i].Spawn();
+        }
+        enemiesSpawned = true;
     }
 }
