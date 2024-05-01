@@ -7,9 +7,15 @@ public class PlayerHealth : MonoBehaviour
 {
     private float health;
     private float lerpTimer;
+    private bool bleed = false;
+    private bool funky;
     [Header("Health Bar")]
     public float maxHealth = 100f;
     public float chipSpeed = 2f;
+    public float bleedRate;
+    private float bleedTimer;
+    public float healRate;
+    private float healTimer;
     public Image frontHealthBar;
     public Image backHealthBar;
 
@@ -24,20 +30,32 @@ public class PlayerHealth : MonoBehaviour
     {
         health = maxHealth;
         overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0);
+        bleedTimer = bleedRate;
+        healTimer = healRate;
     }
 
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            TakeDamage(20);
-        }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            RestoreHealth(20);
-        }
 
+        if (bleed == true && bleedTimer > 0)
+        {
+            bleedTimer = bleedTimer - Time.deltaTime;
+        }
+        if (bleed == true && bleedTimer <= 0)
+        {
+            bleedTimer = bleedRate;
+            health--;
+        }
+        if (bleed == false && healTimer > 0 && health < maxHealth)
+        {
+            healTimer = healTimer - Time.deltaTime;
+        }
+        if (bleed == false && healTimer <= 0)
+        {
+            healTimer = healRate;
+            health++;
+        }
 
         health = Mathf.Clamp(health, 0, maxHealth);
 
@@ -88,12 +106,16 @@ public class PlayerHealth : MonoBehaviour
         health -= damage;
         lerpTimer = 0f;
         duration = 0f;
+        if (damage > 10)
+        { bleed = true;}
+
         overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, opacity);
     }
     public void RestoreHealth(float healAmount)
     {
         health += healAmount;
         lerpTimer = 0f;
+        bleed = false;
     }
 }
 

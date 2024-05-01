@@ -14,7 +14,9 @@ public class EnemyHealthBar : MonoBehaviour
     public bool isDead = false, projectileEnemy = false, meleeEnemy = false;
     public int randomPoint;
     GameObject enemyBrain;
+    GameObject player;
     CollectiveEnemyBrain brain;
+    PlayerHealth playerhealth;
     NavMeshAgent agent;
     Animator animator;
     StateMachine stateMachine;
@@ -31,6 +33,8 @@ public class EnemyHealthBar : MonoBehaviour
 
     private void Awake()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerhealth = player.GetComponent<PlayerHealth>();
         enemyBrain = GameObject.FindWithTag("EnemyBrain");
         brain = enemyBrain.GetComponent<CollectiveEnemyBrain>();
         winFunction = enemyBrain.GetComponent<WinFunction>();
@@ -77,9 +81,11 @@ public class EnemyHealthBar : MonoBehaviour
     }
     private void EnemyDead()
     {
+        playerhealth.RestoreHealth(1);
         Debug.Log("Dead");
         winFunction.Enemies--;
         winFunction.WinCheck();
+        
         if (projectileEnemy == true)
         { 
             ProjectileEnemyDead();
