@@ -9,14 +9,18 @@ public class MeleeEnemyAI : MonoBehaviour
     [SerializeField] float attackRange, attackRate, batRange, batDelay;
     [SerializeField] int damage;
     float attackTimer;
+    public float moveSpeed = 3.5f;
     GameObject player;
     private NavMeshAgent agent;
     [SerializeField] LayerMask playerlayer;
-    void Start()
+    Animator animator;
+    void Awake()
     {
+        animator = GetComponentInChildren<Animator>();
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
         attackTimer = attackRate;
+        agent.speed = moveSpeed;
     }
 
     
@@ -34,6 +38,7 @@ public class MeleeEnemyAI : MonoBehaviour
 
         if ((transform.position - lookPoint).sqrMagnitude < attackRange && attackTimer <= 0)
         {
+            animator.SetTrigger("Swing");
             Invoke("Swing", batDelay);
             attackTimer = attackRate;
         }

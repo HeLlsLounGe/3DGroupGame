@@ -10384,8 +10384,9 @@ MonoBehaviour:
   attackRange: 1
   attackRate: 1
   batRange: 1
-  batDelay: 0.4
+  batDelay: 0.6
   damage: 30
+  moveSpeed: 3.5
   playerlayer:
     serializedVersion: 2
     m_Bits: 1024
@@ -10413,7 +10414,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 20
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
