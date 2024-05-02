@@ -26,16 +26,15 @@ public class EnemySpawnTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && !enemiesSpawned)
         {
-            if (firstWave)
+            if (firstWave == true)
             {
                 for (int i = 0; i < spawnEnemies.Length; i++)
                 {
                     spawnEnemies[i].Spawn();
                 }
                 enemiesSpawned = true;
+                winFunction.Spawners--;
             }
-
-            winFunction.Spawners--;
 
             if (multipleWaves == true)
             { Invoke("NextWave", waveTimer); }
@@ -49,5 +48,6 @@ public class EnemySpawnTrigger : MonoBehaviour
             spawnEnemies[i].Spawn();
         }
         enemiesSpawned = true;
+        winFunction.Spawners--;
     }
 }
