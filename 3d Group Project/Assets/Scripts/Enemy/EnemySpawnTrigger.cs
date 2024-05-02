@@ -8,6 +8,8 @@ public class EnemySpawnTrigger : MonoBehaviour
     public bool multipleWaves;
     public float waveTimer;
     bool enemiesSpawned = false;
+    [SerializeField]
+    bool firstWave = true;
     
     WinFunction winFunction;
     GameObject brain;
@@ -24,11 +26,14 @@ public class EnemySpawnTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && !enemiesSpawned)
         {
-            for (int i = 0; i < spawnEnemies.Length; i++)
+            if (firstWave)
             {
-                spawnEnemies[i].Spawn();
+                for (int i = 0; i < spawnEnemies.Length; i++)
+                {
+                    spawnEnemies[i].Spawn();
+                }
+                enemiesSpawned = true;
             }
-            enemiesSpawned=true;
 
             winFunction.Spawners--;
 
