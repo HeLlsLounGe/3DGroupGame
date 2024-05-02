@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinDoor : MonoBehaviour
 {
@@ -27,7 +28,8 @@ public class WinDoor : MonoBehaviour
     {
         if (other.tag == "Player" && activated)
         {
-            Debug.Log("DoorWorking");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
         }
     }
 }
