@@ -381,7 +381,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89609905}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.17, y: -5.67, z: 21.9}
+  m_LocalPosition: {x: -4.1, y: -5.67, z: 21.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5516,7 +5516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004261906}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.7, y: -5.67, z: 40.6}
+  m_LocalPosition: {x: 0.7, y: -5.67, z: 23.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7256,6 +7256,10 @@ PrefabInstance:
     - target: {fileID: 8815322699251828360, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815322699377439082, guid: f9b22ffeb05561c45955baf081145b53, type: 3}
+      propertyPath: far clip plane
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9b22ffeb05561c45955baf081145b53, type: 3}

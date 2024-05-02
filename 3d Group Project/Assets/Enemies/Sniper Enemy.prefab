@@ -1352,7 +1352,7 @@ MonoBehaviour:
   warnings: 1
   enemyDamage: 30
   warningRate: 0.25
-  counterWindow: 0.2
+  counterWindow: 0.4
   warningSound: {fileID: 5075317584529754280}
   fire: {fileID: 1731491862151831530}
   swordScript: {fileID: 0}

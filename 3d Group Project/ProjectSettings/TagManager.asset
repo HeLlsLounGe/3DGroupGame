@@ -11,6 +11,7 @@ TagManager:
   - Katana
   - EnemyBrain
   - Door
+  - PauseMenu
   layers:
   - Default
   - TransparentFX

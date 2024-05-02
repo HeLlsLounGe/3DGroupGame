@@ -26,12 +26,15 @@ public class PlayerHealth : MonoBehaviour
     public float opacity = 0.7f;
 
     private float durationTimer;
+
+    PlayerMovementPhysics playerMovement;
     void Start()
     {
         health = maxHealth;
         overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, 0);
         bleedTimer = bleedRate;
         healTimer = healRate;
+        playerMovement = GetComponent<PlayerMovementPhysics>();
     }
 
 
@@ -110,6 +113,9 @@ public class PlayerHealth : MonoBehaviour
         { bleed = true;}
 
         overlay.color = new Color(overlay.color.r, overlay.color.g, overlay.color.b, opacity);
+
+        if (health <= 0)
+        { playerMovement.isDead = true; }
     }
     public void RestoreHealth(float healAmount)
     {

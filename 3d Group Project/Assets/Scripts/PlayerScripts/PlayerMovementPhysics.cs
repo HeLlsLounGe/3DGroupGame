@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovementPhysics : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PlayerMovementPhysics : MonoBehaviour
     [SerializeField] float jumpSpeed = 5f;
     [SerializeField] float mouseSensitivity = 3f;
     [SerializeField] float airMultiplier = 0.5f;
+    public bool isDead;
     public float groundDrag = 5f;
 
     public Transform orientation;
@@ -24,6 +26,7 @@ public class PlayerMovementPhysics : MonoBehaviour
     public float playerHeight;
     public LayerMask whatIsGround;
     public bool grounded;
+    float rotation = 0;
 
     private void Awake()
     {
@@ -37,9 +40,13 @@ public class PlayerMovementPhysics : MonoBehaviour
     }
     private void Update()
     {
-        UpdateMovement();
-        UpdateLook();
-        SpeedControl();
+        if (!isDead)
+        {
+            UpdateMovement();
+            UpdateLook();
+            SpeedControl();
+        }
+        Deathfunction();
 
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight);
 
@@ -104,5 +111,27 @@ public class PlayerMovementPhysics : MonoBehaviour
 
         rb.AddForce(transform.up * jumpSpeed * 10f, ForceMode.Impulse);
         
+    }
+    void Deathfunction()
+    {
+        if (isDead == true)
+        {
+            moveSpeed = 0;
+            jumpSpeed = 0;
+            mouseSensitivity= 0;
+            if (rotation < 0.9)
+            {
+                rotation = rotation + Time.deltaTime;
+                transform.Rotate(0, 0, 1 * Time.deltaTime * 120);
+            }
+        
+            if (rotation >= 0.9)
+            {
+               Time.timeScale = 0;
+               GameObject canvas = GameObject.FindGameObjectWithTag("PauseMenu");
+               canvas.GetComponent<Canvas>().enabled = true;
+               Cursor.lockState = CursorLockMode.None;
+            }
+        }
     }
 }
