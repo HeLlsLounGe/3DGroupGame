@@ -33,8 +33,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Cube.001|Cube.001Action
-      takeName: Cube.001|Cube.001Action
+      name: Cube.001|CubeAction (1)
+      takeName: Cube.001|CubeAction
       internalID: -8515560403302317629
       firstFrame: 0
       lastFrame: 109
@@ -298,6 +298,35 @@ ModelImporter:
       takeName: rig|rigAction
       internalID: 8630382434355982939
       firstFrame: 70
+      lastFrame: 109
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Gun movement
+      takeName: Cube.001|Cube.001Action
+      internalID: 2318983221145286371
+      firstFrame: 0
       lastFrame: 109
       wrapMode: 0
       orientationOffsetY: 0
