@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour {
 	void Start () {
         GetComponent<Canvas>().enabled = false;
+        Time.timeScale = 1;
     }
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log("Time scale = " + Time.timeScale);
 		if (Input.GetKeyDown (KeyCode.Escape) && Time.timeScale == 1) {
 			Time.timeScale = 0;
 			Cursor.lockState = CursorLockMode.None;
@@ -40,7 +40,8 @@ public class PauseMenu : MonoBehaviour {
     }
 	public void ReloadScene()
 	{
-		string currentSceneName = SceneManager.GetActiveScene().name;
+        Time.timeScale = 1;
+        string currentSceneName = SceneManager.GetActiveScene().name;
 		SceneManager.LoadScene(currentSceneName);
 	}
 
