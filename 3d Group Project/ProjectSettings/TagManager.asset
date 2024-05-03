@@ -12,6 +12,7 @@ TagManager:
   - EnemyBrain
   - Door
   - PauseMenu
+  - Level Select
   layers:
   - Default
   - TransparentFX
