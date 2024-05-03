@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     GameObject levelSelect;
-    private void Start()
+    Canvas levelSelectCanvas;
+    private void Awake()
     {
         levelSelect = GameObject.FindGameObjectWithTag("Level Select");
+        //levelSelectCanvas = levelSelect.GetComponent<Canvas>();
     }
     public void StartGame()
     {
