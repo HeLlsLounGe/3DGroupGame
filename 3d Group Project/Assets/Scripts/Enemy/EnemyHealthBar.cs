@@ -6,10 +6,10 @@ using UnityEngine.AI;
 public class EnemyHealthBar : MonoBehaviour
 {
     [Header("Attributes")]
-    [SerializeField] private int hitpoints = 50;
+    public int hitpoints = 50;
     [SerializeField] private int switchPoint, healAmount;
     [SerializeField] AudioSource hurtSound;
-    private int MaxHP, switchTimer;
+    public int MaxHP, switchTimer;
     //Slider healthSlider;
     public bool isDead = false, projectileEnemy = false, meleeEnemy = false;
     public int randomPoint;
