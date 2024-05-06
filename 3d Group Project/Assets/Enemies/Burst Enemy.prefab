@@ -5547,6 +5547,8 @@ MonoBehaviour:
   switchPoint: 40
   healAmount: 20
   hurtSound: {fileID: 73429634}
+  MaxHP: 0
+  switchTimer: 0
   isDead: 0
   projectileEnemy: 0
   meleeEnemy: 0
@@ -5958,9 +5960,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fafab8d3210818a4bbb23ea264df5ad1, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.497
-  m_Pitch: 1.58
+  m_Pitch: 2.04
   Loop: 0
   Mute: 0
   Spatialize: 0
