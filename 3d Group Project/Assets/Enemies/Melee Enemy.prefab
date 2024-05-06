@@ -10467,7 +10467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battingPoint: {fileID: 6065673496190935797}
   attackRange: 1
-  attackRate: 1
+  attackRate: 2
   batRange: 1
   batDelay: 0.6
   damage: 30
@@ -10546,6 +10546,8 @@ MonoBehaviour:
   switchPoint: 40
   healAmount: 1
   hurtSound: {fileID: 3585669958929727844}
+  MaxHP: 0
+  switchTimer: 0
   isDead: 0
   projectileEnemy: 0
   meleeEnemy: 1
