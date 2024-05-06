@@ -10,7 +10,7 @@ public class CreditsScript : MonoBehaviour
     private void Update()
     {
         timer += Time.deltaTime;
-        if (timer < Next)
+        if (timer > Next)
         {
             Skip();
         }
