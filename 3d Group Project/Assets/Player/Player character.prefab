@@ -791,7 +791,7 @@ MonoBehaviour:
   criticalDamage: 120
   maxDeflects: 8
   cutSound: {fileID: 1157997890}
-  deflectSound: {fileID: 1157997890}
+  deflectSound: {fileID: 1157997889}
   animator: {fileID: 0}
   attackPoint: {fileID: 1694788163}
   target: {fileID: 0}
