@@ -516,7 +516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   chipSpeed: 2
-  bleedRate: 0.2
+  bleedRate: 100
   healRate: 0.5
   frontHealthBar: {fileID: 8295376193419471986}
   backHealthBar: {fileID: 6980450072518531863}

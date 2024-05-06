@@ -10554,6 +10554,7 @@ GameObject:
   - component: {fileID: 3178807436850445758}
   - component: {fileID: 2317988001893287446}
   - component: {fileID: 3569662431717760083}
+  - component: {fileID: 2949368528715244445}
   m_Layer: 6
   m_Name: Dash Tutorial Enemy
   m_TagString: Enemy
@@ -10679,7 +10680,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5, y: 2.15, z: 0.3}
+  m_Size: {x: 0.8, y: 2.15, z: 0.3}
   m_Center: {x: 0, y: -0.1, z: 0}
 --- !u!195 &6129712527835367310
 NavMeshAgent:
@@ -10731,6 +10732,8 @@ MonoBehaviour:
   switchPoint: 40
   healAmount: 1
   hurtSound: {fileID: 2317988001893287446}
+  MaxHP: 0
+  switchTimer: 0
   isDead: 0
   projectileEnemy: 0
   meleeEnemy: 1
@@ -11155,6 +11158,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2949368528715244445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7990441454878595247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad75f49732117c44abe78c1309519f0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7999308516654021772
 GameObject:
   m_ObjectHideFlags: 0
