@@ -10466,12 +10466,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battingPoint: {fileID: 6065673496190935797}
-  attackRange: 1
-  attackRate: 2
+  attackRange: 2
+  attackRate: 1
   batRange: 1
   batDelay: 0.6
   damage: 30
-  moveSpeed: 3.5
+  moveSpeed: 5
   playerlayer:
     serializedVersion: 2
     m_Bits: 1024
