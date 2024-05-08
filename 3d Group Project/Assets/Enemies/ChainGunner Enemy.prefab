@@ -10020,7 +10020,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   path: {fileID: 745205036937686540}
   sightDistance: 30
-  fieldOfView: 180
+  fieldOfView: 360
   eyeHeight: 0
   gunBarrel: {fileID: 0}
   fireRateUpper: 7
@@ -10042,6 +10042,8 @@ MonoBehaviour:
   switchPoint: 40
   healAmount: 40
   hurtSound: {fileID: 7151041556993907648}
+  MaxHP: 0
+  switchTimer: 0
   isDead: 0
   projectileEnemy: 0
   meleeEnemy: 0
