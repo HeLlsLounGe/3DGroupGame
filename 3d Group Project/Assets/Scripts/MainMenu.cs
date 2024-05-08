@@ -18,8 +18,12 @@ public class MainMenu : MonoBehaviour
     }
     public void StartGame()
     {
+         SceneManager.LoadScene("Tutorial"); 
+    }
+    public void LoadGame()
+    {
         save.Load();
-        SceneManager.LoadScene(levelString);
+        SceneManager.LoadScene(levelString); 
     }
     public void ExitGame()
     {
