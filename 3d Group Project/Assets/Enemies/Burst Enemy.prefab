@@ -5525,7 +5525,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   path: {fileID: 5990264645986493695}
   sightDistance: 30
-  fieldOfView: 180
+  fieldOfView: 360
   eyeHeight: 0
   gunBarrel: {fileID: 0}
   fireRateUpper: 5

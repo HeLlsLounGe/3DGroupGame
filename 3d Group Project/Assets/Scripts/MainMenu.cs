@@ -5,16 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public string levelString;
     GameObject levelSelect;
     Canvas levelSelectCanvas;
+    LevelSave save;
+
     private void Awake()
     {
         levelSelect = GameObject.FindGameObjectWithTag("Level Select");
+        save = GameObject.FindGameObjectWithTag("SaveData").GetComponent<LevelSave>();
         //levelSelectCanvas = levelSelect.GetComponent<Canvas>();
     }
     public void StartGame()
     {
-        SceneManager.LoadScene("Tutorial");
+        save.Load();
+        SceneManager.LoadScene(levelString);
     }
     public void ExitGame()
     {
