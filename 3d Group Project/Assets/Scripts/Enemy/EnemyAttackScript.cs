@@ -10,6 +10,8 @@ public class EnemyAttackScript : MonoBehaviour
     private float warningRateTimer, counterWindowTimer, leniancy;
     [SerializeField] AudioSource warningSound;
     [SerializeField] AudioSource fire;
+    [SerializeField] GameObject warningTexture;
+    SpriteRenderer warningSprite;
     public SwordScript swordScript;
     public CollectiveEnemyBrain brain;
     public GameObject brainObject;
@@ -28,6 +30,7 @@ public class EnemyAttackScript : MonoBehaviour
 
    void Awake()
     { 
+
         counterWindowTimer = counterWindow;
         player = GameObject.FindGameObjectWithTag("Sword");
         playerReal = GameObject.FindGameObjectWithTag("Player");
@@ -38,6 +41,7 @@ public class EnemyAttackScript : MonoBehaviour
         lineBehavior = GetComponentInChildren<LineBehavior>();
         lineBehavior.enabled = false;
         aSCounter = additionalShots;
+        warningSprite = warningTexture.GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -69,6 +73,7 @@ public class EnemyAttackScript : MonoBehaviour
 
   public void WindUp()
     {
+            warningSprite.enabled = true;
             brain.HasFired();
             if (currentWarning > 0)
             { Invoke(nameof(Sound), 0f); }
@@ -100,6 +105,7 @@ public class EnemyAttackScript : MonoBehaviour
         lineBehavior.DeflectedLineDraw();
         brain.CanFireAgain();
         fire.Play();
+        warningSprite.enabled = false;
 
         if (aSCounter > 0)
         { 
@@ -119,6 +125,7 @@ public class EnemyAttackScript : MonoBehaviour
 
             brain.CanFireAgain();
             fire.Play();
+            warningSprite.enabled = false;
         }
         else if (swordScript.leniancyTimer > 0)
         {
