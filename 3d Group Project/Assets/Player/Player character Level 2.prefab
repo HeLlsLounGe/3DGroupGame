@@ -1634,7 +1634,7 @@ MonoBehaviour:
   moveSpeed: 14
   jumpSpeed: 12
   mouseSensitivity: 7
-  airMultiplier: 0.2
+  airMultiplier: 0.5
   isDead: 0
   groundDrag: 5
   orientation: {fileID: 4653582696770440745}
