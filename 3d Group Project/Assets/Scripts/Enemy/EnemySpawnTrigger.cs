@@ -5,11 +5,11 @@ using UnityEngine;
 public class EnemySpawnTrigger : MonoBehaviour
 {
     public SpawnEnemy[] spawnEnemies;
-    public bool multipleWaves;
+    bool delayedWave;
+    
     public float waveTimer;
     bool enemiesSpawned = false;
     [SerializeField]
-    bool firstWave = true;
     
     WinFunction winFunction;
     GameObject brain;
@@ -26,7 +26,7 @@ public class EnemySpawnTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && !enemiesSpawned)
         {
-            if (firstWave == true)
+            if (delayedWave == false)
             {
                 for (int i = 0; i < spawnEnemies.Length; i++)
                 {
@@ -36,12 +36,12 @@ public class EnemySpawnTrigger : MonoBehaviour
                 winFunction.Spawners--;
             }
 
-            if (multipleWaves == true)
-            { Invoke("NextWave", waveTimer); }
+            if (delayedWave == true)
+            { Invoke("DelayedWave", waveTimer); }
         }
     }
 
-    void NextWave()
+    void DelayedWave()
     {
         for (int i = 0; i < spawnEnemies.Length; i++)
         {
