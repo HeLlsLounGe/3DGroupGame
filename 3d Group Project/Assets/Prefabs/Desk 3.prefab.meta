@@ -1,6 +1,20 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:3d Group Project/Assets/Prefabs/Desk 3.prefab.meta
 guid: b241c4c54fe35ac4798390390bccfb59
+========
+guid: 6c8a1df92e5c7a84b89c9d1e81e54722
+>>>>>>>> 33a5991327d6dce1718bd979295c02ab5ba6f7bf:3d Group Project/Assets/Prefabs/Lamp1.prefab.meta
 PrefabImporter:
+=======
+<<<<<<<< HEAD:3d Group Project/Assets/Scenes/Level 3.unity.meta
+guid: 1f2253e6e3ad0da4fa6b5a763b01bc85
+DefaultImporter:
+========
+guid: 8df67fe7041971847b34aed464a14fec
+PrefabImporter:
+>>>>>>>> 33a5991327d6dce1718bd979295c02ab5ba6f7bf:3d Group Project/Assets/Prefabs/Desk 3.prefab.meta
+>>>>>>> 33a5991327d6dce1718bd979295c02ab5ba6f7bf
   externalObjects: {}
   userData: 
   assetBundleName: 
