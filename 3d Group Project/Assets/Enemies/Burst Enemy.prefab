@@ -5570,7 +5570,7 @@ MonoBehaviour:
   enemyDamage: 10
   warningRate: 0.25
   counterWindow: 0.2
-  warningSound: {fileID: 4200639737309303090}
+  warningSound: {fileID: 4200639737309303091}
   fire: {fileID: 73429635}
   warningTexture: {fileID: 4764108521019199219}
   swordScript: {fileID: 0}
@@ -5591,7 +5591,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6aaf3cc8944c0c6439099ed981f6c271, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a29c5adec43578c40a67962766fb557b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
