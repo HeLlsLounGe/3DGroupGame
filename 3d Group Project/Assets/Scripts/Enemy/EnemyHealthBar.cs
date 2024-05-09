@@ -15,6 +15,7 @@ public class EnemyHealthBar : MonoBehaviour
     public int randomPoint;
     GameObject enemyBrain;
     GameObject player;
+    GameObject firingtexture;
     CollectiveEnemyBrain brain;
     PlayerHealth playerhealth;
     NavMeshAgent agent;
@@ -104,10 +105,12 @@ public class EnemyHealthBar : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         movementTracker = GetComponent<EnemyMovementTracker>();
         boxCollider = GetComponents<BoxCollider>();
+        firingtexture = GameObject.Find("FiringTexture");
         Destroy(stateMachine);
         Destroy(enemyAttackScript);
         Destroy(enemy);
         Destroy(agent);
+        Destroy(firingtexture);
         if (brain.canFire == false)
         { brain.CanFireAgain(); }
         Destroy(movementTracker);

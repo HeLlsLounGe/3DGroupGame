@@ -7,6 +7,7 @@ public class AttackState : BaseState
     private float moveTimer;
     private float losePlayerTimer;
     private float shotTimer;
+    private bool firstShot = true;
     
 
    
@@ -31,7 +32,7 @@ public class AttackState : BaseState
             enemy.transform.LookAt(Lookpoint);
 
 
-            if (shotTimer > enemy.fireRate)
+            if (shotTimer > enemy.fireRate || firstShot == true)
             {
                 Shoot();
             }
@@ -56,6 +57,7 @@ public class AttackState : BaseState
     {
         enemy.Fire();
         shotTimer = 0;
+        firstShot = false;
         //Transform gunbarrel = enemy.gunBarrel;
         //GameObject bullet = GameObject.Instantiate(Resources.Load("Prefabs/Bullet") as GameObject, gunbarrel.position, enemy.transform.rotation);
         //Vector3 shootDirection = (enemy.Player.transform.position - gunbarrel.transform.position).normalized;
