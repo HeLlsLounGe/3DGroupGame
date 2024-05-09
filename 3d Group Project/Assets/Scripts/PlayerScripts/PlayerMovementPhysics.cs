@@ -81,18 +81,19 @@ public class PlayerMovementPhysics : MonoBehaviour
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         if (grounded)
-        { rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force); }
+        { rb.AddForce(moveDirection.normalized * moveSpeed * 10f * Time.deltaTime * 400, ForceMode.Force); }
 
         else if (!grounded)
-        { rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force); }
+        { rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier * Time.deltaTime * 400, ForceMode.Force); }
     }
 
     void SpeedControl()
     {
-      Vector3 FlatVel = new Vector3(rb.velocity.x, 0f,rb.velocity.z);
-        if (FlatVel.magnitude > moveSpeed)
+        Vector3 FlatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+        if (FlatVel.magnitude > moveSpeed && gameObject.GetComponent<DashScript>().isDashing == false)
         {
-            Invoke(nameof(SpeedControlPartTwo), 0.3f);
+            Vector3 limitedVel = FlatVel.normalized * moveSpeed;
+            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
         }
     }
     void SpeedControlPartTwo()
