@@ -3304,6 +3304,10 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 14.09
       objectReference: {fileID: 0}
+    - target: {fileID: 4486839711094498989, guid: 183d8f1f6fdf252478b47b5aa840dfdc, type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 4200639737309303092, guid: 679b819dabbccef4fa7e42a0a996f0ba, type: 3}
     - target: {fileID: 4486839711094498990, guid: 183d8f1f6fdf252478b47b5aa840dfdc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.82
@@ -4751,7 +4755,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 28698d09473aebb41ae9d4ad3b434183, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.478
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -48215,6 +48219,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6169059200973330429, guid: bd7ef825c1213f1488ec720c53401e8f, type: 3}
   m_PrefabInstance: {fileID: 928930349}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1439137730
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1011167904766812905, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_Name
+      value: Pop Up Trigger (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270821831267536380, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 431.7629
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270821831267536380, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.7468
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270821831267536380, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 49.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090852456483214051, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135237155498522636, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135237155498522636, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135237155498522636, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -60.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135237155498522636, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135237155498522636, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135237155498522636, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135237155498522636, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135237155498522636, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135237155498522636, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135237155498522636, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700345924129600464, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_text
+      value: watch out for PURPLE MACHINEGUNNERS they fire after only 3 beats be
+        careful
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
 --- !u!1001 &1457112076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49297,6 +49379,10 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 12.56
       objectReference: {fileID: 0}
+    - target: {fileID: 4486839711094498989, guid: 183d8f1f6fdf252478b47b5aa840dfdc, type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 6802784952650918902, guid: 8c579a47ad883a742833bb3edf3fa84f, type: 3}
     - target: {fileID: 4486839711094498990, guid: 183d8f1f6fdf252478b47b5aa840dfdc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.65
@@ -49670,7 +49756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e1231385fad536438e7aa9ecb487322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 6802784952650918902, guid: 8c579a47ad883a742833bb3edf3fa84f, type: 3}
+  enemyPrefab: {fileID: 4200639737309303092, guid: 679b819dabbccef4fa7e42a0a996f0ba, type: 3}
 --- !u!1 &1711171036
 GameObject:
   m_ObjectHideFlags: 0
@@ -51355,6 +51441,10 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 20.58
       objectReference: {fileID: 0}
+    - target: {fileID: 4486839711094498989, guid: 183d8f1f6fdf252478b47b5aa840dfdc, type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 4200639737309303092, guid: 679b819dabbccef4fa7e42a0a996f0ba, type: 3}
     - target: {fileID: 4486839711094498990, guid: 183d8f1f6fdf252478b47b5aa840dfdc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13.48
@@ -51687,6 +51777,7 @@ SceneRoots:
   - {fileID: 1820331809}
   - {fileID: 888730157}
   - {fileID: 1011333156}
+  - {fileID: 1439137730}
   - {fileID: 1255208030}
   - {fileID: 1979123010}
   - {fileID: 1792605184}
