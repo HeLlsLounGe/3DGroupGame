@@ -3421,8 +3421,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1833961876482119032}
-  - {fileID: 1306914542483894363}
   - {fileID: 270851957028842700}
+  - {fileID: 1306914542483894363}
   m_Father: {fileID: 5075317584529754282}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2738781405811575588
@@ -8691,7 +8691,7 @@ GameObject:
   - component: {fileID: 1306914542483894363}
   - component: {fileID: 560869751441494646}
   - component: {fileID: 4697522326376090599}
-  - component: {fileID: 8279916987009559862}
+  - component: {fileID: 1364079571630552598}
   m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
@@ -8707,9 +8707,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5935435301639186918}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.41151154, y: 0.63091743, z: 0.5285501, w: -0.39145395}
-  m_LocalPosition: {x: -2.9052293, y: 0.848121, z: 0.35893503}
-  m_LocalScale: {x: 89.176926, y: 89.176926, z: 89.176926}
+  m_LocalRotation: {x: -0.4115115, y: 0.63091743, z: 0.5285501, w: -0.39145392}
+  m_LocalPosition: {x: -2.9052734, y: 0.84812105, z: 0.35892487}
+  m_LocalScale: {x: 89.176926, y: 89.17691, z: 89.17692}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3243203121050963485}
@@ -8764,7 +8764,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &8279916987009559862
+--- !u!95 &1364079571630552598
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -8777,7 +8777,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: a8a36059994842b4e9c217216a3f5ec7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
