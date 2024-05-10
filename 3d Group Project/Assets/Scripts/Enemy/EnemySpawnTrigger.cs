@@ -37,7 +37,10 @@ public class EnemySpawnTrigger : MonoBehaviour
             }
 
             if (delayedWave == true)
-            { Invoke("DelayedWave", waveTimer); }
+            {
+                enemiesSpawned = true;
+                Invoke("DelayedWave", waveTimer); 
+            }
         }
     }
 
