@@ -9,8 +9,13 @@ public class PlayOnLevelLoad : MonoBehaviour
     LevelSave saveFunction;
     private void Awake()
     {
-        save = GameObject.FindGameObjectWithTag("SaveData").GetComponent<SavedData>();
+        //save = GameObject.FindGameObjectWithTag("SaveData").GetComponent<SavedData>();
         saveFunction = GameObject.FindGameObjectWithTag("SaveData").GetComponent<LevelSave>();
+        //saveFunction.Save();
+    }
+    private void OnLevelWasLoaded(int level)
+    {
+        Debug.Log("foo");
         saveFunction.Save();
     }
 }

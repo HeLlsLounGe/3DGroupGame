@@ -15,7 +15,7 @@ public class LevelSave : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        /*if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Save();
 
@@ -23,7 +23,7 @@ public class LevelSave : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Keypad1))
         {
             Load();
-        }
+        }*/
     }
 
     public void Save()
@@ -37,17 +37,19 @@ public class LevelSave : MonoBehaviour
         myDataString = EncryptDecryptData(myDataString);
         System.IO.File.WriteAllText(file, myDataString);
     }
-    public void Load()
+    public string Load()
     {
-        MainMenu mainMenu = GameObject.FindGameObjectWithTag("SaveData").GetComponent<MainMenu>();
+        //MainMenu mainMenu = GameObject.FindGameObjectWithTag("SaveData").GetComponent<MainMenu>();
         string file = Application.persistentDataPath + "/" + gameObject.name + ".json";
         if (File.Exists(file))
         {
             var jsonData = File.ReadAllText(file);
             jsonData = EncryptDecryptData(jsonData);
             SavedData myData = JsonUtility.FromJson<SavedData>(jsonData);
-            mainMenu.levelString = myData.currentScene;
+            //mainMenu.levelString = myData.currentScene;
+            return myData.currentScene;
         }
+        return null;
     }
 
     public string EncryptDecryptData(string data)

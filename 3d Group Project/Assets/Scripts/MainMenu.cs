@@ -22,7 +22,7 @@ public class MainMenu : MonoBehaviour
     }
     public void LoadGame()
     {
-        save.Load();
+        string levelString = save.Load();
         SceneManager.LoadScene(levelString); 
     }
     public void ExitGame()
