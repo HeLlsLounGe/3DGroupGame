@@ -6,7 +6,7 @@ using System.IO;
 
 public class LevelSave : MonoBehaviour
 {
-    private static string keyWord = "123456789";
+    private static string keyWord = "69420NICE";
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
