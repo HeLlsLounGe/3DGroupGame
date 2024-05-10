@@ -15,7 +15,7 @@ public class EnemyHealthBar : MonoBehaviour
     public int randomPoint;
     GameObject enemyBrain;
     GameObject player;
-    GameObject firingtexture;
+    SpriteRenderer[] firingtexture;
     CollectiveEnemyBrain brain;
     PlayerHealth playerhealth;
     NavMeshAgent agent;
@@ -34,6 +34,7 @@ public class EnemyHealthBar : MonoBehaviour
 
     private void Awake()
     {
+        firingtexture = GetComponentsInChildren<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player");
         playerhealth = player.GetComponent<PlayerHealth>();
         enemyBrain = GameObject.FindWithTag("EnemyBrain");
@@ -105,12 +106,10 @@ public class EnemyHealthBar : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         movementTracker = GetComponent<EnemyMovementTracker>();
         boxCollider = GetComponents<BoxCollider>();
-        firingtexture = GameObject.Find("FiringTexture");
         Destroy(stateMachine);
         Destroy(enemyAttackScript);
         Destroy(enemy);
         Destroy(agent);
-        Destroy(firingtexture);
         if (brain.canFire == false)
         { brain.CanFireAgain(); }
         Destroy(movementTracker);
@@ -121,6 +120,10 @@ public class EnemyHealthBar : MonoBehaviour
         for (int i = 0; i < weakPointManagers.Length; i++)
         {
             weakPointManagers[i].KillFunction();
+        }
+        for (int i = 0; i < firingtexture.Length; i++)
+        {
+            Destroy(firingtexture[i]);
         }
         animator.SetTrigger("Fall");
         
