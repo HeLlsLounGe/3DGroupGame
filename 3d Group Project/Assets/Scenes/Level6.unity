@@ -2461,6 +2461,10 @@ PrefabInstance:
       value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 4486839710024618736, guid: 183d8f1f6fdf252478b47b5aa840dfdc, type: 3}
+      propertyPath: delayedWave
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486839710024618736, guid: 183d8f1f6fdf252478b47b5aa840dfdc, type: 3}
       propertyPath: multipleWaves
       value: 1
       objectReference: {fileID: 0}
@@ -2564,7 +2568,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4486839710024618736, guid: 183d8f1f6fdf252478b47b5aa840dfdc, type: 3}
       propertyPath: waveTimer
-      value: 45
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4486839710024618736, guid: 183d8f1f6fdf252478b47b5aa840dfdc, type: 3}
+      propertyPath: delayedWave
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4486839710024618736, guid: 183d8f1f6fdf252478b47b5aa840dfdc, type: 3}
       propertyPath: multipleWaves

@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawnTrigger : MonoBehaviour
 {
     public SpawnEnemy[] spawnEnemies;
-    bool delayedWave;
+    [SerializeField] bool delayedWave;
     
     public float waveTimer;
     bool enemiesSpawned = false;
