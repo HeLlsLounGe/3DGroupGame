@@ -6,22 +6,18 @@ using UnityEngine.SceneManagement;
 public class WinDoor : MonoBehaviour
 {
     public bool activated = false;
+    AudioSource doorSound;
     Animator animator;
     void Awake()
     {
         animator = GetComponentInChildren<Animator>();
+        doorSound = GetComponent<AudioSource>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void DoorOpen()
     {
         animator.SetTrigger("Open");
         activated = true;
+        doorSound.Play();
     }
 
      void OnTriggerEnter(Collider other)

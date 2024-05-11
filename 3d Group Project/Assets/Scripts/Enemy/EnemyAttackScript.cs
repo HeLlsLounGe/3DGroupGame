@@ -28,15 +28,15 @@ public class EnemyAttackScript : MonoBehaviour
     float fireRate = 0.07f;
 
 
-   void Awake()
-    { 
+    void Awake()
+    {
 
         counterWindowTimer = counterWindow;
         player = GameObject.FindGameObjectWithTag("Sword");
         playerReal = GameObject.FindGameObjectWithTag("Player");
         brainObject = GameObject.FindGameObjectWithTag("EnemyBrain");
         currentWarning = warnings;
-        swordScript =  player.GetComponent<SwordScript>();
+        swordScript = player.GetComponent<SwordScript>();
         brain = brainObject.GetComponent<CollectiveEnemyBrain>();
         lineBehavior = GetComponentInChildren<LineBehavior>();
         lineBehavior.enabled = false;
@@ -45,7 +45,7 @@ public class EnemyAttackScript : MonoBehaviour
     }
 
     void Update()
-    {  
+    {
         if (counterWindowTimer > 0)
         { counterWindowTimer -= Time.deltaTime; }
 
@@ -71,44 +71,44 @@ public class EnemyAttackScript : MonoBehaviour
         }
     }
 
-  public void WindUp()
+    public void WindUp()
     {
-            warningSprite.enabled = true;
-            brain.HasFired();
-            if (currentWarning > 0)
-            { Invoke(nameof(Sound), 0f); }
+        warningSprite.enabled = true;
+        brain.HasFired();
+        if (currentWarning > 0)
+        { Invoke(nameof(Sound), 0f); }
 
-            else if (currentWarning <= 0)
-            { Invoke(nameof(Window), 0f); }   
+        else if (currentWarning <= 0)
+        { Invoke(nameof(Window), 0f); }
     }
-  void Sound()
+    void Sound()
     {
-       warningSound.Play();
-       currentWarning--;
-       Invoke(nameof(WindUp), warningRate - leniancy); 
+        warningSound.Play();
+        currentWarning--;
+        Invoke(nameof(WindUp), warningRate - leniancy);
     }
 
     void Window()
     {
-       player.GetComponent<SwordScript>().target = gameObject;
-       swordScript.DeflectState(); 
-       counterWindowTimer = counterWindow;
-       currentWarning = warnings;
-       bulletState = true;
-       aSCounter = additionalShots;
-    } 
+        player.GetComponent<SwordScript>().target = gameObject;
+        swordScript.DeflectState();
+        counterWindowTimer = counterWindow;
+        currentWarning = warnings;
+        bulletState = true;
+        aSCounter = additionalShots;
+    }
     public void Countered()
     {
         lineBehavior.enabled = true;
         bulletState = false;
         GetComponent<EnemyHealthBar>().TakeDamage(enemyDamage);
         lineBehavior.DeflectedLineDraw();
-        brain.CanFireAgain();
+        Invoke("FireAgain", 0.25f * (1 + warnings));
         fire.Play();
         warningSprite.enabled = false;
 
         if (aSCounter > 0)
-        { 
+        {
             aSCounter--;
             Burst();
         }
@@ -117,19 +117,19 @@ public class EnemyAttackScript : MonoBehaviour
     void Uncountered()
     {
         if (swordScript.leniancyTimer <= 0 && bulletState)
-        {      
+        {
             playerReal.GetComponent<PlayerHealth>().TakeDamage(enemyDamage);
 
             lineBehavior.enabled = true;
             lineBehavior.UndeflectedLineDraw();
 
-            brain.CanFireAgain();
+            Invoke("FireAgain", 0.25f * (1 + warnings));
             fire.Play();
             warningSprite.enabled = false;
         }
         else if (swordScript.leniancyTimer > 0)
         {
-           Countered();
+            Countered();
         }
 
 
@@ -139,6 +139,11 @@ public class EnemyAttackScript : MonoBehaviour
             Burst();
         }
         else { bulletState = false; }
+    }
+
+    void FireAgain()
+    {
+        brain.CanFireAgain();
     }
 
     void Burst()

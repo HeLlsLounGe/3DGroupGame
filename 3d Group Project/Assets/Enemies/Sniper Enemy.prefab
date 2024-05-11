@@ -7016,7 +7016,7 @@ MonoBehaviour:
   warnings: 1
   enemyDamage: 30
   warningRate: 0.25
-  counterWindow: 0.4
+  counterWindow: 0.3
   warningSound: {fileID: 5075317584529754280}
   fire: {fileID: 1731491862151831530}
   warningTexture: {fileID: 5505370878144891710}
@@ -7297,7 +7297,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5075317584529754287}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c084f5085d17dd042b18ca498c2c77ef, type: 3}
   m_Name: 

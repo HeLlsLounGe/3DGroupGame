@@ -13245,11 +13245,11 @@ PrefabInstance:
     - target: {fileID: 6700345924129600464, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
       propertyPath: m_text
       value: TIME A SWORD SWING TO DEFLECT BULLETS. BLUE ENEMIES ATTACK ON THE FOURTH
-        BEAT
+        BEAT. DEFLECT SIX TIMES TO CONTINUE
       objectReference: {fileID: 0}
     - target: {fileID: 6700345924129600464, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
       propertyPath: m_fontSize
-      value: 25
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 6700345924129600464, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
       propertyPath: m_margin.z
@@ -13257,7 +13257,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6700345924129600464, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
       propertyPath: m_fontSizeBase
-      value: 25
+      value: 22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14892,7 +14892,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: aa16461ef41495b47b991ddfe8fee0f0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.455
   m_Pitch: 1
   Loop: 0
   Mute: 0

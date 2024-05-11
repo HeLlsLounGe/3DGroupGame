@@ -6,17 +6,6 @@ public class CollectiveEnemyBrain : MonoBehaviour
 {
     public bool canFire = true;
 
-
-    void Awake()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void HasFired()
     {
         canFire = false;
@@ -24,7 +13,6 @@ public class CollectiveEnemyBrain : MonoBehaviour
 
     public void CanFireAgain()
     {
-        canFire = true;
-        Debug.Log("Can Fire");
+        canFire= true;
     }
 }
