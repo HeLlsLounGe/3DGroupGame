@@ -5546,7 +5546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitpoints: 120
   switchPoint: 40
-  healAmount: 20
+  healAmount: 10
   hurtSound: {fileID: 73429634}
   MaxHP: 0
   switchTimer: 0
@@ -5567,7 +5567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   warnings: 2
-  enemyDamage: 10
+  enemyDamage: 13
   warningRate: 0.25
   counterWindow: 0.2
   warningSound: {fileID: 4200639737309303091}
