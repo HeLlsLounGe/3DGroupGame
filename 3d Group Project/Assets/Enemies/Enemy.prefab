@@ -9401,7 +9401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0835bb0e1d90ede4992884a92e3346c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpoints: 80
+  hitpoints: 70
   switchPoint: 40
   healAmount: 5
   hurtSound: {fileID: 1629224114}

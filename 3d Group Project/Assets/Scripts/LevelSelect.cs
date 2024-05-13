@@ -23,7 +23,7 @@ public class LevelSelect : MonoBehaviour
     }
     public void Level5()
     {
-        SceneManager.LoadScene("Level6");
+        SceneManager.LoadScene("Level5");
     }
     public void Level6()
     {

@@ -6,11 +6,11 @@ public class EnemySpawnTrigger : MonoBehaviour
 {
     public SpawnEnemy[] spawnEnemies;
     [SerializeField] bool delayedWave;
-    
+
     public float waveTimer;
     bool enemiesSpawned = false;
     [SerializeField]
-    
+
     WinFunction winFunction;
     GameObject brain;
 
@@ -34,12 +34,13 @@ public class EnemySpawnTrigger : MonoBehaviour
                 }
                 enemiesSpawned = true;
                 winFunction.Spawners--;
+                Invoke("RemoveTrigger", 1);
             }
 
             if (delayedWave == true)
             {
                 enemiesSpawned = true;
-                Invoke("DelayedWave", waveTimer); 
+                Invoke("DelayedWave", waveTimer);
             }
         }
     }
@@ -52,5 +53,11 @@ public class EnemySpawnTrigger : MonoBehaviour
         }
         enemiesSpawned = true;
         winFunction.Spawners--;
+        Invoke("RemoveTrigger", 1);
+    }
+
+    void RemoveTrigger()
+    {
+        Destroy(gameObject);
     }
 }

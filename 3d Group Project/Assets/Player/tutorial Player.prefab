@@ -741,7 +741,7 @@ MonoBehaviour:
   deflectionState: 0
   sliceKey: 324
   sliceDelay: 0.2
-  sliceCd: 0.4
+  sliceCd: 0.6
   attackRange: 1.9
   leniancy: 0.5
   leniancyTimer: 0
