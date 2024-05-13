@@ -7,16 +7,28 @@ public class CreditsScript : MonoBehaviour
 {
     [SerializeField] float Next = 45f;
     float timer = 0;
+    [SerializeField] bool endcredits = false;
     private void Update()
     {
         timer += Time.deltaTime;
         if (timer > Next)
         {
-            Skip();
+            if (endcredits)
+            {
+                Skip();
+            }else
+            {
+                LoadLevel();
+            }
+            
         }
     }
     public void Skip()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+    public void LoadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
