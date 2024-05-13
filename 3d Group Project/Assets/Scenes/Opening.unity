@@ -915,7 +915,7 @@ Animator:
   m_GameObject: {fileID: 1150479277}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0c0945415937acc45abe83ba95ff0c9f, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1199,7 +1199,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 274}
   m_SizeDelta: {x: 420.9141, y: 154.0351}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1474382504
@@ -1428,53 +1428,52 @@ MonoBehaviour:
   m_text: 'You''ve been a no life wage chaser for years living off crumbs. Working
     for Liminal Incorporated.
 
-    
 
-    But you find out your employer is offering
-    you an opportunity because of your ambidexterity.
 
-    
+    But you find out your employer is offering you
+    an opportunity because of your ambidexterity.
 
-    They''ll triple
-    your total salary if you go through with an experiment.
 
-    
 
-    Yeah sure
-    they have to cut your brain open and replace half of it with a computer.
+    They''ll triple your total
+    salary if you go through with an experiment.
 
-    
 
-    But
-    Triple salary is hard to ignore, and you decide to go through with it.
 
-    
+    Yeah sure they have to cut
+    your brain open and replace half of it with a computer.
 
-    You
-    wake up after the surgery. It''s a complete success. Your hand eye coordination
-    is perfect. Your Reaction times are imperceptible. Your memories are full of
-    new skills.
 
-    
 
-    
+    But Triple salary
+    is hard to ignore, and you decide to go through with it.
 
-    At least you think it''s successful. Unbeknownst
-    to you there was a second aspect of the experiment.  A mind control aspect that
-    was unsuccessful.
 
-    
 
-    Now your employers are sending HR to fire you.....
+    You wake up after
+    the surgery. It''s a complete success. Your hand eye coordination is perfect.
+    Your Reaction times are imperceptible. Your memories are full of new skills.
 
-    
 
-    
 
-    
 
-    ....From
-    life
+
+    At
+    least you think it''s successful. Unbeknownst to you there was a second aspect
+    of the experiment.  A mind control aspect that was unsuccessful.
+
+
+
+    Now your
+    employers are sending HR to fire you.....
+
+
+
+
+
+
+
+    ....From life
 
 '
   m_isRightToLeft: 0
@@ -1693,7 +1692,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 274}
   m_SizeDelta: {x: 420.9141, y: 154.0351}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884573603
