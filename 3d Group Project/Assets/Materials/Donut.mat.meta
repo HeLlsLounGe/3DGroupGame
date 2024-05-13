@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:3d Group Project/Assets/Materials/Donut.mat.meta
 guid: d2925053ca3507245b5ee7aecdc4bddb
 NativeFormatImporter:
+=======
+guid: 1a5de5f8e60c77145a7acad584809a56
+DefaultImporter:
+>>>>>>> Stashed changes:3d Group Project/Assets/Scenes/Level 6.unity.meta
   externalObjects: {}
   mainObjectFileID: 2100000
   userData: 
