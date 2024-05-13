@@ -782,12 +782,12 @@ MonoBehaviour:
   deflectionState: 0
   sliceKey: 324
   sliceDelay: 0.2
-  sliceCd: 0.4
+  sliceCd: 0.6
   attackRange: 1.9
   leniancy: 0.5
   leniancyTimer: 0
   recharge: 0.6
-  damage: 15
+  damage: 20
   criticalDamage: 120
   maxDeflects: 8
   cutSound: {fileID: 1157997890}

@@ -29,5 +29,6 @@ public class TextBoxPopUp : MonoBehaviour
         Time.timeScale = 1;
         canvas.enabled = false;
         Cursor.lockState = CursorLockMode.Locked;
+        Destroy(gameObject);
     }
 }
