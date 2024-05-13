@@ -260,7 +260,7 @@ MonoBehaviour:
   leniancy: 0.5
   leniancyTimer: 0
   recharge: 0.6
-  damage: 20
+  damage: 15
   criticalDamage: 120
   maxDeflects: 8
   cutSound: {fileID: 3792392284289767447}
