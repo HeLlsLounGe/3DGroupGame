@@ -1049,58 +1049,79 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'For many years youve been a no life wage chaser, living off of scraps
+  m_text: 'For many years you''ve been a no-life wage chaser, living off of scraps
     and crumbs, working for LIMINAL.INC
 
-
+    
 
     However, one day you see a simple
     poster, offering anyone who is ambidextrous a chance to do great things! You
-    dont care much about that until you see...
+    don''t care much about that until you see...
 
+    
 
+    They''ll triple your
+    total salary if you go through with an experiment!!!
 
-    They''ll triple your total
-    salary if you go through with an experiment!!!
+    
 
+    Yeah, sure
+    they have to cut your brain open and replace half of it with a computer.
 
+    
 
-    Yeah sure they have to
-    cut your brain open and replace half of it with a computer.
+    But
+    triple  the salary is hard to ignore, so of course, like any other person, you
+    sign up immediately. You enter the dark room, and it all fades to black....
 
+    
 
+    You
+    wake up after the surgery. It''s a complete success. Your hand-eye coordination
+    is beyond godlike. Your reaction times are imperceivable. Your memories are flooded
+    with hundreds of perfected fighting styles.
 
-    But Triple
-    salary is hard to ignore, so of course, like any other person you sign up immidiately.
-    You enter the dark room and it all fades to black....
+    
 
+    At least you think it''s
+    successful... Unbeknownst to you, there was a second aspect of the experiment. 
+    A second, more sinister aspect... (totally not due to the author being lazy)
+    MIND CONTROL!
 
+    
 
-    You wake up after
-    the surgery. It''s a complete success. Your hand eye coordination is beyond godly.
-    Your Reaction times are impercievable. Your memories are flooded with hundreds
-    of perfected fighting styles.
+    Now HR is en route to fire you.....
 
+    
 
+    
 
-    At least you think it''s successful... Unbeknownst
-    to you there was a second aspect of the experiment.  A second, more sinister
-    aspect... (totally not due to the author being lazy) MIND CONTROL!
+    
 
+    
 
+    
 
-    Now
-    HR is en route to fire you.....
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    
 
+    ....From
+    life
 
-    ....From life
+    
 
 '
   m_isRightToLeft: 0
@@ -1384,8 +1405,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00000083447, y: -8.2516}
-  m_SizeDelta: {x: 949.3201, y: 604.9868}
+  m_AnchoredPosition: {x: 0.00000083447, y: -1346.7609}
+  m_SizeDelta: {x: 949.32, y: 3282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2120176429
 MonoBehaviour:
