@@ -2118,16 +2118,28 @@ PrefabInstance:
       value: eatDonut
       objectReference: {fileID: 0}
     - target: {fileID: 7773325760814318785, guid: 40c99ef9622e4034891e0d9171ba28dd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773325760814318785, guid: 40c99ef9622e4034891e0d9171ba28dd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773325760814318785, guid: 40c99ef9622e4034891e0d9171ba28dd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773325760814318785, guid: 40c99ef9622e4034891e0d9171ba28dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 850.787
+      value: 852.09
       objectReference: {fileID: 0}
     - target: {fileID: 7773325760814318785, guid: 40c99ef9622e4034891e0d9171ba28dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.371
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7773325760814318785, guid: 40c99ef9622e4034891e0d9171ba28dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 540.014
+      value: 529.75
       objectReference: {fileID: 0}
     - target: {fileID: 7773325760814318785, guid: 40c99ef9622e4034891e0d9171ba28dd, type: 3}
       propertyPath: m_LocalRotation.w

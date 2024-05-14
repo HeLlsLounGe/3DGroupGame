@@ -721,7 +721,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 70, y: -27.999998}
+  m_AnchoredPosition: {x: 14, y: -27.999998}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1455392274
@@ -1090,7 +1090,7 @@ MonoBehaviour:
 
 
     Now
-    HR is en route to fire you.....
+    because the Mind Control was unsuccessful HR is en route to fire you.....
 
 
 
@@ -1099,7 +1099,8 @@ MonoBehaviour:
 
 
 
-    ....From life
+    ....From
+    life
 
 
 
