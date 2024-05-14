@@ -7068,7 +7068,7 @@ MonoBehaviour:
   eyeHeight: 0
   gunBarrel: {fileID: 0}
   fireRateUpper: 5
-  fireRateLower: 2
+  fireRateLower: 3
   fireRate: 5
 --- !u!114 &5075317584529754286
 MonoBehaviour:
