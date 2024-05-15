@@ -280,8 +280,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6700345924129600464, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
       propertyPath: m_text
-      value: Look out for GREEN CHAIN GUNNERS. They fire after 6 beats but they pack
-        a punch
+      value: Look out for GREEN CHAIN GUNNERS. They fire on the 6th beat but they
+        pack a punch
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700345924129600464, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6700345924129600464, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6579,7 +6587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6700345924129600464, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
       propertyPath: m_text
-      value: Kill Enimies Quickly they'll be respawning
+      value: Kill Enimies Quickly or else they'll overwhelm you
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

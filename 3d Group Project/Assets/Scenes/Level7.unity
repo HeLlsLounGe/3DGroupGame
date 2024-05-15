@@ -8364,7 +8364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6700345924129600464, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
       propertyPath: m_text
-      value: watch out for BLACK SNIPER ENEMIES they fire after just 2 beats
+      value: watch out for BLACK SNIPER ENEMIES they fire on just 2    beats
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
