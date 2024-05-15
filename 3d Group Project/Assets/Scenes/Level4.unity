@@ -49012,8 +49012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6700345924129600464, guid: 1264df3c3d6381b449b3f41357537c75, type: 3}
       propertyPath: m_text
-      value: watch out for PURPLE MACHINEGUNNERS they fire after only 3 beats be
-        careful
+      value: watch out for PURPLE MACHINEGUNNERS they fire on the 3rd beat be careful
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
