@@ -191,7 +191,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -2114,7 +2114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -295, y: 76}
+  m_AnchoredPosition: {x: -295, y: 112.7}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &559755002
@@ -3726,6 +3726,18 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 273093954460441757, guid: c4c2dd611178f184bbf1d1ace983d868, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 273093954460441757, guid: c4c2dd611178f184bbf1d1ace983d868, type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.158
+      objectReference: {fileID: 0}
+    - target: {fileID: 273093954460441757, guid: c4c2dd611178f184bbf1d1ace983d868, type: 3}
+      propertyPath: m_Shadows.m_NearPlane
+      value: 0.34
+      objectReference: {fileID: 0}
     - target: {fileID: 2068467301962419428, guid: c4c2dd611178f184bbf1d1ace983d868, type: 3}
       propertyPath: m_Name
       value: Lamp1
@@ -4504,6 +4516,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 484921029}
     m_Modifications:
+    - target: {fileID: 3955521940851918369, guid: 3f2c86cd526ed4d4b9e5d9bb90dc8dcc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.3500242
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955521940851918369, guid: 3f2c86cd526ed4d4b9e5d9bb90dc8dcc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3099933
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955521940851918369, guid: 3f2c86cd526ed4d4b9e5d9bb90dc8dcc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000024214385
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955521940851918369, guid: 3f2c86cd526ed4d4b9e5d9bb90dc8dcc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.1473178
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955521940851918369, guid: 3f2c86cd526ed4d4b9e5d9bb90dc8dcc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.14731807
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955521940851918369, guid: 3f2c86cd526ed4d4b9e5d9bb90dc8dcc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.69159055
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955521940851918369, guid: 3f2c86cd526ed4d4b9e5d9bb90dc8dcc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.6915904
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955521940851918369, guid: 3f2c86cd526ed4d4b9e5d9bb90dc8dcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 245.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955521940851918369, guid: 3f2c86cd526ed4d4b9e5d9bb90dc8dcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955521940851918369, guid: 3f2c86cd526ed4d4b9e5d9bb90dc8dcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 4295369576839303134, guid: 3f2c86cd526ed4d4b9e5d9bb90dc8dcc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24.733063
@@ -4855,7 +4907,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -295, y: 76}
+  m_AnchoredPosition: {x: -295, y: 132.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1957148051
@@ -4887,8 +4939,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279505940
-  m_fontColor: {r: 0.07924521, g: 0.07924521, b: 0.07924521, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
